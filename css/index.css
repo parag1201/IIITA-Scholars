@@ -1,0 +1,70 @@
+body {
+    margin : 0;
+}
+
+.navbar-header {
+    width: 7em;
+	height: 4em;
+}
+
+.navbar-header img {
+    width: 4em;
+    height: 3em;
+}
+
+.navbar > form {
+    margin-left: 100px;
+}
+
+input {
+    outline: none;
+}
+
+.form-inline .form-control {
+    width: 600px;
+    min-width: 200px;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+	padding: 20px 10px 20px 0px;
+	background-color: grey;
+	transition: all ease 0.4s;
+}
+ 
+.navbar-brand {
+	font-size: 22px;
+	margin-left: 1em;
+	color: white !important;
+}
+.navbar .navbar-nav li a {
+	font-size: 16px;
+	color: white;
+	display: flex;
+	flex-direction: row;
+}
+
+.navbar-right li a {
+    text-decoration-line: none;
+    text-decoration: none;
+}
+
+.navbar-right li {
+    display:inline;
+    padding: 10px 40px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .form-inline .form-control  {
+        width: 240px;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+    .form-inline .form-control  {
+        width: 240px;
+    }
+}
