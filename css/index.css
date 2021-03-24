@@ -1,5 +1,7 @@
 body {
     margin : 0;
+    background-image: url("../images/homepage.jpg");
+    background-size: 100%;
 }
 
 /* Navbar */
@@ -21,6 +23,22 @@ body {
         width: 150px;
         height: 150px;
     }    
+}
+
+/* Search */
+
+.search-div {
+    padding: 2% 10%;
+}
+
+.search-label {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.dept {
+    background-color: white;
+    margin: 0% 5px;
 }
 
 /* 
