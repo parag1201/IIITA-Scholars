@@ -14,7 +14,10 @@
 			rel="stylesheet"
 			href="https://unpkg.com/flickity@2/dist/flickity.min.css"
 		/>
-    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+		<link
+			rel="stylesheet"
+			href="//use.fontawesome.com/releases/v5.0.7/css/all.css"
+		/>
 		<link rel="stylesheet" href="css/index.css" />
 
 		<!-- Bootstrap js -->
@@ -29,7 +32,9 @@
 		<!-- navbar -->
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<div class="navbar-header">
-				<a href="#" class="navbar-brand"><img src="images/logo3.png" /></a>
+				<a href="#" class="navbar-brand"
+					><img src="images/logo3.png"
+				/></a>
 			</div>
 			<button
 				class="navbar-toggler"
@@ -72,154 +77,208 @@
 			<div class="col-md-6"></div>
 		</div> -->
 
-
-    <!-- Section 1 (search) -->
+		<!-- Section 1 (search) -->
 
 		<div class="container-fluid search-div">
-      <form action="not telling">
-        <div class="form-row">
-          <div class="col-md-8 form-group">
-            <label class="search-label">Search for publications</label>
-            <input class="form-control" type="text" placeholder="Enter keywords...">
-          </div>
-          <div class="col-md-4 form-group">
-            <label class="search-label">Select Faculty</label>
-            <select id="inputState" class="form-control">
-              <option selected>All</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-            </select>
-          </div>
-        </div>
+			<form action="not telling">
+				<div class="form-row">
+					<div class="col-md-8 form-group">
+						<label class="search-label"
+							>Search for publications</label
+						>
+						<input
+							class="form-control"
+							type="text"
+							placeholder="Enter keywords..."
+						/>
+					</div>
+					<div class="col-md-4 form-group">
+						<label class="search-label">Select Faculty</label>
+						<select id="inputState" class="form-control">
+							<option selected>All</option>
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+						</select>
+					</div>
+				</div>
 
-        <div class="form-row">
-          <div class="col-md-6 dept">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" checked>
-              <label class="form-check-label" for="inlineCheckbox1">Department of Applied Sciences</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" checked>
-              <label class="form-check-label" for="inlineCheckbox2">Department of Electronics and Communication Engineering</label>       
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" checked>
-              <label class="form-check-label" for="inlineCheckbox3">Department of Information Technology</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4" checked>
-              <label class="form-check-label" for="inlineCheckbox4">Department of Management Studies</label>
-            </div>
-          </div>
-        </div>
+				<div class="form-row">
+					<div class="col-md-6 dept">
+						<div class="form-check">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox1"
+								value="option1"
+								checked
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox1"
+								>Department of Applied Sciences</label
+							>
+						</div>
+						<div class="form-check">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox2"
+								value="option2"
+								checked
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox2"
+								>Department of Electronics and Communication
+								Engineering</label
+							>
+						</div>
+						<div class="form-check">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox3"
+								value="option3"
+								checked
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox3"
+								>Department of Information Technology</label
+							>
+						</div>
+						<div class="form-check">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="inlineCheckbox4"
+								value="option4"
+								checked
+							/>
+							<label
+								class="form-check-label"
+								for="inlineCheckbox4"
+								>Department of Management Studies</label
+							>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
 
-      </form>
-    </div>
-
-
-		<div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true, "autoPlay" : true}'>
+		<div
+			class="gallery js-flickity"
+			data-flickity-options='{ "wrapAround": true, "autoPlay" : true}'
+		>
 			<div class="gallery-cell">
-        <div>
-          <img src="img_prof1.jpg" alt="Prof 1" />
-        </div>
-				<div class="prof-slide-info">
-          <h2 class="profName"> Prof Pritish Kumar Varadwaj
-          </h2>
-          <h2 class="prof-department">Department of Applied Sciences</h2>
-        </div> 
-        <div class="prof-stats">
-          <i class="fas fa-file-alt"></i>
-          <span>165</span>
-          <h6>Publications</h6>
-
-          <i class="fas fa-file-alt"></i>
-          <span>79</span>
-          <h6>Citations</h6>
-        </div>
-        <button class="btn btn-primary">View Profile</button>
-			</div>
-
-			<div class="gallery-cell">
-        <div>
-          <img src="img_prof2.jpg" alt="Prof 2" />
-        </div>
-        <div class="prof-slide-info">
-          <h2 class="profName"> Prof Tapobrata Lahiri
-          </h2>
-          <h2 class="prof-department">Department of Applied Sciences</h2>
-        </div>
-        <div class="prof-stats">
-          <i class="fas fa-file-alt"></i>
-          <span>165</span>
-          <h6>Publications</h6>
-
-          <i class="fas fa-file-alt"></i>
-          <span>79</span>
-          <h6>Citations</h6>
-        </div>
-        <button class="btn btn-primary">View Profile</button>
-			</div>
-
-			<div class="gallery-cell">
-        <div>
-          <img src="img_prof3.jpeg" alt="Prof 3" />
-        </div>
-				<div class="prof-slide-info">
-          <h2 class="profName"> Dr Manish Kumar
-          </h2>
-          <h2 class="prof-department">Department of Applied Sciences</h2>
-        </div>
-        <div class="prof-stats">
-          <i class="fas fa-file-alt"></i>
-          <span>165</span>
-          <h6>Publications</h6>
-
-          <i class="fas fa-file-alt"></i>
-          <span>79</span>
-          <h6>Citations</h6>
-        </div>
-        <button class="btn btn-primary">View Profile</button>
-			</div>
-			
-      <div class="gallery-cell">
 				<div>
-          <img src="img_prof4.jpg" alt="Prof 4" />
-        </div>
-        <div class="prof-slide-info">
-          <h2 class="profName">Dr Pramod Kumar</h2>
-          <h2 class="prof-department">Department of Applied Sciences</h2>
-        </div>
-        <div class="prof-stats">
-          <i class="fas fa-file-alt"></i>
-          <span>165</span>
-          <h6>Publications</h6>
+					<img src="img_prof1.jpg" alt="Prof 1" />
+				</div>
+				<div class="prof-slide-info">
+					<h2 class="profName">Prof Pritish Kumar Varadwaj</h2>
+					<h2 class="prof-department">
+						Department of Applied Sciences
+					</h2>
+				</div>
+				<div class="prof-stats">
+					<i class="fas fa-file-alt"></i>
+					<span>165</span>
+					<h6>Publications</h6>
 
-          <i class="fas fa-file-alt"></i>
-          <span>79</span>
-          <h6>Citations</h6>
-        </div>
-        <button class="btn btn-primary">View Profile</button>
+					<i class="fas fa-file-alt"></i>
+					<span>79</span>
+					<h6>Citations</h6>
+				</div>
+				<button class="btn btn-primary">View Profile</button>
 			</div>
 
 			<div class="gallery-cell">
-        <div>
-          <img src="img_prof5.png" alt="Prof 5" />
-        </div>
-        <div class="prof-slide-info">
-          <h2 class="profName">Prof Krishna Misra</h2>
-          <h2 class="prof-department">Department of Applied Sciences</h2>
-        </div>
-        <div class="prof-stats">
-          <i class="fas fa-file-alt"></i>
-          <span>165</span>
-          <h6>Publications</h6>
+				<div>
+					<img src="img_prof2.jpg" alt="Prof 2" />
+				</div>
+				<div class="prof-slide-info">
+					<h2 class="profName">Prof Tapobrata Lahiri</h2>
+					<h2 class="prof-department">
+						Department of Applied Sciences
+					</h2>
+				</div>
+				<div class="prof-stats">
+					<i class="fas fa-file-alt"></i>
+					<span>165</span>
+					<h6>Publications</h6>
 
-          <i class="fas fa-file-alt"></i>
-          <span>79</span>
-          <h6>Citations</h6>
-        </div>
-        <button class="btn btn-primary">View Profile</button>
+					<i class="fas fa-file-alt"></i>
+					<span>79</span>
+					<h6>Citations</h6>
+				</div>
+				<button class="btn btn-primary">View Profile</button>
+			</div>
+
+			<div class="gallery-cell">
+				<div>
+					<img src="img_prof3.jpeg" alt="Prof 3" />
+				</div>
+				<div class="prof-slide-info">
+					<h2 class="profName">Dr Manish Kumar</h2>
+					<h2 class="prof-department">
+						Department of Applied Sciences
+					</h2>
+				</div>
+				<div class="prof-stats">
+					<i class="fas fa-file-alt"></i>
+					<span>165</span>
+					<h6>Publications</h6>
+
+					<i class="fas fa-file-alt"></i>
+					<span>79</span>
+					<h6>Citations</h6>
+				</div>
+				<button class="btn btn-primary">View Profile</button>
+			</div>
+
+			<div class="gallery-cell">
+				<div>
+					<img src="img_prof4.jpg" alt="Prof 4" />
+				</div>
+				<div class="prof-slide-info">
+					<h2 class="profName">Dr Pramod Kumar</h2>
+					<h2 class="prof-department">
+						Department of Applied Sciences
+					</h2>
+				</div>
+				<div class="prof-stats">
+					<i class="fas fa-file-alt"></i>
+					<span>165</span>
+					<h6>Publications</h6>
+
+					<i class="fas fa-file-alt"></i>
+					<span>79</span>
+					<h6>Citations</h6>
+				</div>
+				<button class="btn btn-primary">View Profile</button>
+			</div>
+
+			<div class="gallery-cell">
+				<div>
+					<img src="img_prof5.png" alt="Prof 5" />
+				</div>
+				<div class="prof-slide-info">
+					<h2 class="profName">Prof Krishna Misra</h2>
+					<h2 class="prof-department">
+						Department of Applied Sciences
+					</h2>
+				</div>
+				<div class="prof-stats">
+					<i class="fas fa-file-alt"></i>
+					<span>165</span>
+					<h6>Publications</h6>
+
+					<i class="fas fa-file-alt"></i>
+					<span>79</span>
+					<h6>Citations</h6>
+				</div>
+				<button class="btn btn-primary">View Profile</button>
 			</div>
 		</div>
 
