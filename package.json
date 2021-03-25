@@ -1,0 +1,22 @@
+{
+  "name": "iiita-scholars",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parag1201/IIITA-Scholars.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/parag1201/IIITA-Scholars/issues"
+  },
+  "homepage": "https://github.com/parag1201/IIITA-Scholars#readme",
+  "dependencies": {
+    "@srexi/purecounterjs": "^1.1.1"
+  }
+}

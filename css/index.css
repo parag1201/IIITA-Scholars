@@ -1,7 +1,5 @@
 body {
     margin : 0;
-    background-image: url("../images/homepage.jpg");
-    background-size: 100%;
 }
 
 /* Navbar */
@@ -28,7 +26,10 @@ body {
 /* Search */
 
 .search-div {
-    padding: 2% 10%;
+    padding: 2% 10% 5%;
+    background-image: url("../images/homepage.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
 }
 
 .search-label {
@@ -39,6 +40,35 @@ body {
 .dept {
     background-color: white;
     margin: 0% 5px;
+}
+
+#inputState1 {
+    margin-bottom: 3px;
+}
+
+/* Counter */
+
+#counter {
+    padding: 2.2% 10% 1%;
+}
+
+.count-box {
+    text-align: center;
+    position: relative;
+    background-color: rgb(246, 251, 254);
+    padding: 30px 2px;
+    box-shadow: 10px 5px 10px 5px #ececec;
+}
+
+.count-box i {
+    position: absolute;
+    top: -8px;
+    color: blue;
+    transform: scale(2.4,2.4)
+}
+
+.count-box span {
+    font-size: 2rem;
 }
 
 /* 

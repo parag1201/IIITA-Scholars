@@ -14,8 +14,10 @@
 			rel="stylesheet"
 			href="https://unpkg.com/flickity@2/dist/flickity.min.css"
 		/>
-    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
-		<link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    
 
 		<!-- Bootstrap js -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -75,8 +77,8 @@
 
     <!-- Section 1 (search) -->
 
-		<div class="container-fluid search-div">
-      <form action="not telling">
+		<div class="container-fluid search-div" data-aos="fade-up">
+      <form action="#">
         <div class="form-row">
           <div class="col-md-8 form-group">
             <label class="search-label">Search for publications</label>
@@ -112,10 +114,56 @@
               <label class="form-check-label" for="inlineCheckbox4">Department of Management Studies</label>
             </div>
           </div>
+
+          <div class="col-md-2 form-group">
+            <select id="inputState1" class="form-control">
+              <option selected>All years</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+            </select>
+            <button type="button" class="btn btn-primary ml-auto"><i class="fas fa-search"></i> Start Searching</button>
+          </div>
+
+          
         </div>
 
       </form>
     </div>
+
+    <!-- Section 2 (counter) -->
+
+    <section id="counter">
+      <div class="row counter-div">
+        <div class="col-lg-3 col-md-6">
+          <div class="count-box" data-aos="zoom-in">
+            <i class="fas fa-user-friends"></i>
+            <span class="count">66</span><p>Faculties</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="count-box" data-aos="zoom-in">
+            <i class="far fa-newspaper"></i>
+            <span class="count">1203</span><p>Publications</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="count-box" data-aos="zoom-in">
+            <i class="fas fa-link"></i>
+            <span class="count">5636</span><p>Citations</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="count-box" data-aos="zoom-in">
+            <i class="fas fa-graduation-cap"></i>
+            <span class="count">4</span><p>Departments</p>
+          </div>
+        </div>       
+      </div>
+    </section>
 
 
 		<div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true, "autoPlay" : true}'>
@@ -230,5 +278,13 @@
 
 		<!--bar graph -->
 		<!-- <div class="row"></div> -->
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script async src="dist/purecounter.js"></script>
+    <script src="./javascript/index.js"></script>
+
 	</body>
 </html>
