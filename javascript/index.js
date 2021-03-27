@@ -1,5 +1,14 @@
 AOS.init();
 
+var swiper = new Swiper('.swiper-container', {
+	slidesPerView: 3,
+	spaceBetween: 30,
+	pagination: {
+	  el: '.swiper-pagination',
+	  clickable: true,
+	},
+  });
+
 $(".count").each(function () {
 	$(this)
 		.prop("Counter", 0)
