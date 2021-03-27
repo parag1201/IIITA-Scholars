@@ -1,344 +1,451 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<!-- CSS Files -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
-		<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"/>
-    	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-    	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    	<link rel="stylesheet" href="css/index.css" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.css" integrity="sha512-C7hOmCgGzihKXzyPU/z4nv97W0d9bv4ALuuEbSf6hm93myico9qa0hv4dODThvCsqQUmKmLcJmlpRmCaApr83g==" crossorigin="anonymous" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css" integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w==" crossorigin="anonymous" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.0/swiper-bundle.min.css">
+        <!-- CSS Files -->
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+            integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.css"
+            integrity="sha512-C7hOmCgGzihKXzyPU/z4nv97W0d9bv4ALuuEbSf6hm93myico9qa0hv4dODThvCsqQUmKmLcJmlpRmCaApr83g=="
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css"
+            integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w=="
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.0/swiper-bundle.min.css"
+        />
+        <link rel="stylesheet" href="css/index.css" />
 
-		<!-- Bootstrap js -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-		<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.js" integrity="sha512-zO8oeHCxetPn1Hd9PdDleg5Tw1bAaP0YmNvPY8CwcRyUk7d7/+nyElmFrB6f7vg4f7Fv4sui1mcep8RIEShczg==" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js" integrity="sha512-SuxO9djzjML6b9w9/I07IWnLnQhgyYVSpHZx0JV97kGBfTIsUYlWflyuW4ypnvhBrslz1yJ3R+S14fdCWmSmSA==" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js" integrity="sha512-hZf9Qhp3rlDJBvAKvmiG+goaaKRZA6LKUO35oK6EsM0/kjPK32Yw7URqrq3Q+Nvbbt8Usss+IekL7CRn83dYmw==" crossorigin="anonymous"></script>
-		
+        <!-- Bootstrap js -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+            integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.js"
+            integrity="sha512-zO8oeHCxetPn1Hd9PdDleg5Tw1bAaP0YmNvPY8CwcRyUk7d7/+nyElmFrB6f7vg4f7Fv4sui1mcep8RIEShczg=="
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js"
+            integrity="sha512-SuxO9djzjML6b9w9/I07IWnLnQhgyYVSpHZx0JV97kGBfTIsUYlWflyuW4ypnvhBrslz1yJ3R+S14fdCWmSmSA=="
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"
+            integrity="sha512-hZf9Qhp3rlDJBvAKvmiG+goaaKRZA6LKUO35oK6EsM0/kjPK32Yw7URqrq3Q+Nvbbt8Usss+IekL7CRn83dYmw=="
+            crossorigin="anonymous"
+        ></script>
 
-		<title>Document</title>
-	</head>
-	<body>
-		<!-- navbar -->
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<div class="navbar-header">
-				<a href="#" class="navbar-brand"
-					><img src="images/logo3.png"
-				/></a>
-			</div>
-			<button
-				class="navbar-toggler"
-				type="button"
-				data-toggle="collapse"
-				data-target="#navbarNav"
-				aria-controls="navbarNav"
-				aria-expanded="false"
-				aria-label="Toggle navigation"
-			>
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="#">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#about-section">About</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Faculties</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Publications</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand"
+                    ><img src="images/logo3.png"
+                /></a>
+            </div>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-section">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Faculties</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Publications</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
-		<!--first box-->
-		<!-- <div class="row">
+        <!--first box-->
+        <!-- <div class="row">
 			<div class="col-md-6"></div>
 			<div class="col-md-6"></div>
 		</div> -->
 
-		<!--second box-->
-		<!-- <div class="row">
+        <!--second box-->
+        <!-- <div class="row">
 			<div class="col-md-6"></div>
 			<div class="col-md-6"></div>
 		</div> -->
 
-		<!-- Section 1 (search) -->
+        <!-- Section 1 (search) -->
 
-		<div class="container-fluid search-div" data-aos="fade-up">
-			<form action="#">
-				<div class="form-row">
-				<div class="col-md-8 form-group">
-					<label class="search-label">Search for publications</label>
-					<input class="form-control" type="text" placeholder="Enter keywords...">
-				</div>
-				<div class="col-md-4 form-group">
-					<label class="search-label">Select Faculty</label>
-					<select id="inputState" class="form-control">
-					<option selected>All</option>
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					</select>
-				</div>
-				</div>
+        <div class="container-fluid search-div" data-aos="fade-up">
+            <form action="#">
+                <div class="form-row">
+                    <div class="col-md-8 form-group">
+                        <label class="search-label"
+                            >Search for publications</label
+                        >
+                        <input
+                            class="form-control"
+                            type="text"
+                            placeholder="Enter keywords..."
+                        />
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label class="search-label">Select Faculty</label>
+                        <select id="inputState" class="form-control">
+                            <option selected>All</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                </div>
 
-				<div class="form-row">
-					<div class="col-md-6 dept">
-						<div class="form-check">
-							<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" checked>
-							<label class="form-check-label" for="inlineCheckbox1">Department of Applied Sciences</label>
-						</div>
-						<div class="form-check">
-							<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" checked>
-							<label class="form-check-label" for="inlineCheckbox2">Department of Electronics and Communication Engineering</label>       
-						</div>
-						<div class="form-check">
-							<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" checked>
-							<label class="form-check-label" for="inlineCheckbox3">Department of Information Technology</label>
-						</div>
-						<div class="form-check">
-							<input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4" checked>
-							<label class="form-check-label" for="inlineCheckbox4">Department of Management Studies</label>
-						</div>
-					</div>
+                <div class="form-row">
+                    <div class="col-md-6 dept">
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="inlineCheckbox1"
+                                value="option1"
+                                checked
+                            />
+                            <label
+                                class="form-check-label"
+                                for="inlineCheckbox1"
+                                >Department of Applied Sciences</label
+                            >
+                        </div>
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="inlineCheckbox2"
+                                value="option2"
+                                checked
+                            />
+                            <label
+                                class="form-check-label"
+                                for="inlineCheckbox2"
+                                >Department of Electronics and Communication
+                                Engineering</label
+                            >
+                        </div>
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="inlineCheckbox3"
+                                value="option3"
+                                checked
+                            />
+                            <label
+                                class="form-check-label"
+                                for="inlineCheckbox3"
+                                >Department of Information Technology</label
+                            >
+                        </div>
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="inlineCheckbox4"
+                                value="option4"
+                                checked
+                            />
+                            <label
+                                class="form-check-label"
+                                for="inlineCheckbox4"
+                                >Department of Management Studies</label
+                            >
+                        </div>
+                    </div>
 
-					<div class="col-md-3 col-sm-6 form-group search-form">
-						<select id="inputState1" class="form-control">
-						<option selected>Year</option>
-						<option>1</option>
-						<option>2</option>
-						<option>3</option>
-						</select>
-						<button type="button" class="btn btn-primary "><i class="fas fa-search"></i> Search</button>
-					</div>
-				</div>
-			</form>
-		</div>
+                    <div class="col-md-3 col-sm-6 form-group search-form">
+                        <select id="inputState1" class="form-control">
+                            <option selected>Year</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                        <button type="button" class="btn btn-primary">
+                            <i class="fas fa-search"></i> Search
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
 
-    <!-- Section 2 (counter) -->
+        <!-- Section 2 (counter) -->
 
-		<section id="counter">
-			<div class="row counter-div">
-				<div class="col-lg-3 col-md-6">
-					<div class="count-box" data-aos="zoom-in" data-aos-delay="100">
-						<i class="fas fa-user-friends"></i>
-						<span class="count">66</span><p>Faculties</p>
-					</div>
-				</div>
+        <section id="counter">
+            <div class="row counter-div">
+                <div class="col-lg-3 col-md-6">
+                    <div
+                        class="count-box"
+                        data-aos="zoom-in"
+                        data-aos-delay="100"
+                    >
+                        <i class="fas fa-user-friends"></i>
+                        <span class="count">66</span>
+                        <p>Faculties</p>
+                    </div>
+                </div>
 
-				<div class="col-lg-3 col-md-6">
-					<div class="count-box" data-aos="zoom-in" data-aos-delay="200">
-						<i class="far fa-newspaper"></i>
-						<span class="count">1203</span><p>Publications</p>
-					</div>
-				</div>
+                <div class="col-lg-3 col-md-6">
+                    <div
+                        class="count-box"
+                        data-aos="zoom-in"
+                        data-aos-delay="200"
+                    >
+                        <i class="far fa-newspaper"></i>
+                        <span class="count">1203</span>
+                        <p>Publications</p>
+                    </div>
+                </div>
 
-				<div class="col-lg-3 col-md-6">
-					<div class="count-box" data-aos="zoom-in" data-aos-delay="300">
-						<i class="fas fa-link"></i>
-						<span class="count">5636</span><p>Citations</p>
-					</div>
-				</div>
+                <div class="col-lg-3 col-md-6">
+                    <div
+                        class="count-box"
+                        data-aos="zoom-in"
+                        data-aos-delay="300"
+                    >
+                        <i class="fas fa-link"></i>
+                        <span class="count">5636</span>
+                        <p>Citations</p>
+                    </div>
+                </div>
 
-				<div class="col-lg-3 col-md-6">
-					<div class="count-box" data-aos="zoom-in" data-aos-delay="400">
-						<i class="fas fa-graduation-cap"></i>
-						<span class="count">4</span><p>Departments</p>
-					</div>
-				</div>       
-			</div>
-		</section>
+                <div class="col-lg-3 col-md-6">
+                    <div
+                        class="count-box"
+                        data-aos="zoom-in"
+                        data-aos-delay="400"
+                    >
+                        <i class="fas fa-graduation-cap"></i>
+                        <span class="count">4</span>
+                        <p>Departments</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Section (Carousel) -->
 
-		<section class="carousel">
-			<div class="swiper-container">
-				<div class="swiper-wrapper">
-				  <div class="swiper-slide">Slide 1</div>
-				  <div class="swiper-slide">Slide 2</div>
-				  <div class="swiper-slide">Slide 3</div>
-				  <div class="swiper-slide">Slide 4</div>
-				  <div class="swiper-slide">Slide 5</div>
-				  <div class="swiper-slide">Slide 6</div>
-				  <div class="swiper-slide">Slide 7</div>
-				  <div class="swiper-slide">Slide 8</div>
-				  <div class="swiper-slide">Slide 9</div>
-				  <div class="swiper-slide">Slide 10</div>
-				</div>
-				<!-- Add Pagination -->
-				<div class="swiper-pagination"></div>
-			  </div>
-		</section>
+        <section class="carousel">
+            <div class="swiper-container" data-aos="zoom-out-left">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="prof-card">
+                            <img src="img_prof1.jpg" alt="" />
+                            <br />
+                            <span>Prof Pritish Kumar Varadwaj</span>
+                            <p>Department of Applied Sciences</p>
+                            <div class="card-content">
+                                <i class="far fa-newspaper"></i> 1213
+                                Publications
+                                <br />
+                                <i class="fas fa-link"></i> 223 Citations
+                                <br />
+                                <button
+                                    type="button"
+                                    class="btn btn-outline-info"
+                                >
+                                    View Profile
+                                </button>
+                            </div>
+                        </div>
+                    </div>
 
-		<!-- <div class="carousel slide" data-ride="carousel">
-			<div class="carousel-inner">
-				<div class="gallery-cell carousel-item col-md-3 col-sm-2">
-					<div>
-						<img src="img_prof1.jpg" alt="Prof 1" />
-					</div>
-					<div class="prof-slide-info">
-						<h2 class="profName">Prof Pritish Kumar Varadwaj</h2>
-						<h2 class="prof-department">
-							Department of Applied Sciences
-						</h2>
-					</div>
-					<div class="prof-stats">
-						<i class="fas fa-file-alt"></i>
-						<span>165</span>
-						<h6>Publications</h6>
+                    <div class="swiper-slide">
+                        <div class="prof-card">
+                            <img src="img_prof1.jpg" alt="" />
+                            <br />
+                            <span>Prof Pritish Kumar Varadwaj</span>
+                            <p>Department of Applied Sciences</p>
+                            <div class="card-content">
+                                <i class="far fa-newspaper"></i> 1213
+                                Publications
+                                <br />
+                                <i class="fas fa-link"></i> 223 Citations
+                                <br />
+                                <button
+                                    type="button"
+                                    class="btn btn-outline-info"
+                                >
+                                    View Profile
+                                </button>
+                            </div>
+                        </div>
+                    </div>
 
-						<i class="fas fa-file-alt"></i>
-						<span>79</span>
-						<h6>Citations</h6>
-					</div>
-					<button class="btn btn-primary">View Profile</button>
-				</div>
+                    <div class="swiper-slide">
+                        <div class="prof-card">
+                            <img src="img_prof1.jpg" alt="" />
+                            <br />
+                            <span>Prof Pritish Kumar Varadwaj</span>
+                            <p>Department of Applied Sciences</p>
+                            <div class="card-content">
+                                <i class="far fa-newspaper"></i> 1213
+                                Publications
+                                <br />
+                                <i class="fas fa-link"></i> 223 Citations
+                                <br />
+                                <button
+                                    type="button"
+                                    class="btn btn-outline-info"
+                                >
+                                    View Profile
+                                </button>
+                            </div>
+                        </div>
+                    </div>
 
-				<div class="gallery-cell carousel-item col-md-3 col-sm-2">
-					<div>
-						<img src="img_prof2.jpg" alt="Prof 2" />
-					</div>
-					<div class="prof-slide-info">
-						<h2 class="profName">Prof Tapobrata Lahiri</h2>
-						<h2 class="prof-department">
-							Department of Applied Sciences
-						</h2>
-					</div>
-					<div class="prof-stats">
-						<i class="fas fa-file-alt"></i>
-						<span>165</span>
-						<h6>Publications</h6>
+                    <div class="swiper-slide">
+                        <div class="prof-card">
+                            <img src="img_prof1.jpg" alt="" />
+                            <br />
+                            <span>Prof Pritish Kumar Varadwaj</span>
+                            <p>Department of Applied Sciences</p>
+                            <div class="card-content">
+                                <i class="far fa-newspaper"></i> 1213
+                                Publications
+                                <br />
+                                <i class="fas fa-link"></i> 223 Citations
+                                <br />
+                                <button
+                                    type="button"
+                                    class="btn btn-outline-info"
+                                >
+                                    View Profile
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
 
-						<i class="fas fa-file-alt"></i>
-						<span>79</span>
-						<h6>Citations</h6>
-					</div>
-					<button class="btn btn-primary">View Profile</button>
-				</div>
+        <div class="bar_graph" style="margin: 5% 20% 5% 20%">
+            <canvas
+                id="myChart"
+                width="700"
+                height="350"
+                style="border: solid 0.5px grey"
+            ></canvas>
+        </div>
 
-				<div class="gallery-cell carousel-item col-md-3 col-sm-2">
-					<div>
-						<img src="img_prof3.jpeg" alt="Prof 3" />
-					</div>
-					<div class="prof-slide-info">
-						<h2 class="profName">Dr Manish Kumar</h2>
-						<h2 class="prof-department">
-							Department of Applied Sciences
-						</h2>
-					</div>
-					<div class="prof-stats">
-						<i class="fas fa-file-alt"></i>
-						<span>165</span>
-						<h6>Publications</h6>
-
-						<i class="fas fa-file-alt"></i>
-						<span>79</span>
-						<h6>Citations</h6>
-					</div>
-					<button class="btn btn-primary">View Profile</button>
-				</div>
-
-				<div class="gallery-cell carousel-item col-md-3 col-sm-2">
-					<div>
-						<img src="img_prof4.jpg" alt="Prof 4" />
-					</div>
-					<div class="prof-slide-info">
-						<h2 class="profName">Dr Pramod Kumar</h2>
-						<h2 class="prof-department">
-							Department of Applied Sciences
-						</h2>
-					</div>
-					<div class="prof-stats">
-						<i class="fas fa-file-alt"></i>
-						<span>165</span>
-						<h6>Publications</h6>
-
-						<i class="fas fa-file-alt"></i>
-						<span>79</span>
-						<h6>Citations</h6>
-					</div>
-					<button class="btn btn-primary">View Profile</button>
-				</div>
-
-				<div class="gallery-cell carousel-item active col-md-3 col-sm-2">
-					<div>
-						<img src="img_prof5.png" alt="Prof 5" />
-					</div>
-					<div class="prof-slide-info">
-						<h2 class="profName">Prof Krishna Misra</h2>
-						<h2 class="prof-department">
-							Department of Applied Sciences
-						</h2>
-					</div>
-					<div class="prof-stats">
-						<i class="fas fa-file-alt"></i>
-						<span>165</span>
-						<h6>Publications</h6>
-
-						<i class="fas fa-file-alt"></i>
-						<span>79</span>
-						<h6>Citations</h6>
-					</div>
-					<button class="btn btn-primary">View Profile</button>
-				</div>
-			</div>
-		</div> -->
-
-
-		<div class="bar_graph" style="margin: 5% 20% 5% 20%;">
-			<canvas id="myChart" width="700" height="350" style="border:solid 0.5px grey"></canvas>
-		</div>
-
-
-		<div id="about-section"  class="row-cols-8 m-5">
-			<h1 style="text-align: center;">About IIITA Research Scholars</h1>
-			<p style="text-align: justify; margin: 20px 10%;">Located in a beautiful wooden land of 250 hectares, IIT Madras is an internationally acclaimed centre for research and industrial consultancy in India. In this predominantly research-driven institute, around 550 faculty members, more than 3000 MS, PhD research scholars and many undergraduate students are engaged in high-quality research work. One in every three students of the institute has mandatory research work as a part of his/her curriculum at some point. IIT Madras also offers unique research driven post graduate program, MS(By Research) and a full-fledged doctoral research program, culminating in a PhD Degree. The myriad streams of research include, but are not limited to 16 departments and many interdisciplinary research projects and industry-driven research work.
-
-				Ranked as the best engineering institution in India, ranked as # 1 in the NIRF 2020 list and has been maintaining the top position for the last 5 years. IIT Madras also houses a “first-of-its-kind”, IITM Research Park, which incubates start-ups and houses R&D Companies, bringing industry and academia, closer than ever before. The Research Park strives for innovative, high-tech collaboration bridging the gap between engineering education and industrial experience.
-				
-				Every year many students and researchers are honoured by multiple organizations for their patents and high quality research contributions. The institute churns out some of the best researchers of the country every year. These researchers have been making impactful contributions in the industries they work in.
-				
-				This portal is aimed at making available the research accomplishments of IIT Madras Scholars in the public domain, so that prospective employers, potential collaborators and co-researchers from other institutions can locate and establish contact with research scholars, working in their respective areas of interest. This is aimed at increasing the visibility of the research work undertaken by the institute research community to the outside wo</p>
-		</div>
-		<!-- sliding window -->
-		<!-- <div class="row">
+        <div id="about-section" class="row-cols-8 m-5">
+            <h1 style="text-align: center">About IIITA Research Scholars</h1>
+            <p style="text-align: justify; margin: 20px 10%">
+                Located in a beautiful wooden land of 250 hectares, IIT Madras
+                is an internationally acclaimed centre for research and
+                industrial consultancy in India. In this predominantly
+                research-driven institute, around 550 faculty members, more than
+                3000 MS, PhD research scholars and many undergraduate students
+                are engaged in high-quality research work. One in every three
+                students of the institute has mandatory research work as a part
+                of his/her curriculum at some point. IIT Madras also offers
+                unique research driven post graduate program, MS(By Research)
+                and a full-fledged doctoral research program, culminating in a
+                PhD Degree. The myriad streams of research include, but are not
+                limited to 16 departments and many interdisciplinary research
+                projects and industry-driven research work. Ranked as the best
+                engineering institution in India, ranked as # 1 in the NIRF 2020
+                list and has been maintaining the top position for the last 5
+                years. IIT Madras also houses a “first-of-its-kind”, IITM
+                Research Park, which incubates start-ups and houses R&D
+                Companies, bringing industry and academia, closer than ever
+                before. The Research Park strives for innovative, high-tech
+                collaboration bridging the gap between engineering education and
+                industrial experience. Every year many students and researchers
+                are honoured by multiple organizations for their patents and
+                high quality research contributions. The institute churns out
+                some of the best researchers of the country every year. These
+                researchers have been making impactful contributions in the
+                industries they work in. This portal is aimed at making
+                available the research accomplishments of IIT Madras Scholars in
+                the public domain, so that prospective employers, potential
+                collaborators and co-researchers from other institutions can
+                locate and establish contact with research scholars, working in
+                their respective areas of interest. This is aimed at increasing
+                the visibility of the research work undertaken by the institute
+                research community to the outside wo
+            </p>
+        </div>
+        <!-- sliding window -->
+        <!-- <div class="row">
 			<div class="container"></div>
 		</div> -->
 
-		<!--bar graph -->
-		<!-- <div class="row"></div> -->
+        <!--bar graph -->
+        <!-- <div class="row"></div> -->
 
-	<!-- Section (Footer) -->
+        <!-- Section (Footer) -->
 
-	<section class="footer">
-		<div class="footer-div">
-			<p>
-				<a href="https://iiita.ac.in/">Main Site</a> | <a href="https://iiita.ac.in/contact">Contact</a> | <a href="https://iiita.ac.in/rti">RTI</a> | <a href="https://iiita.ac.in/administration/">Administration</a>
-			</p>
-				Indian Institute of Information Technology Allahabad<br>
-			Devghat, Jhalwa, Prayagraj-211015, U. P. INDIA<br>
-			Phone: 91-532-2922025,    Fax: 91-532-2922125,   Email: contact@iiita.ac.in 
-		</div>
-	</section>
+        <section class="footer">
+            <div class="footer-div">
+                <p>
+                    <a href="https://iiita.ac.in/">Main Site</a> |
+                    <a href="https://iiita.ac.in/contact">Contact</a> |
+                    <a href="https://iiita.ac.in/rti">RTI</a> |
+                    <a href="https://iiita.ac.in/administration/"
+                        >Administration</a
+                    >
+                </p>
+                Indian Institute of Information Technology Allahabad<br />
+                Devghat, Jhalwa, Prayagraj-211015, U. P. INDIA<br />
+                Phone: 91-532-2922025, Fax: 91-532-2922125, Email:
+                contact@iiita.ac.in
+            </div>
+        </section>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.0/swiper-bundle.min.js"></script>
-    <script src="./javascript/index.js"></script>
-
-
-	</body>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.0/swiper-bundle.min.js"></script>
+        <script src="./javascript/index.js"></script>
+    </body>
 </html>
