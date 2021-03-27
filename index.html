@@ -13,6 +13,7 @@
     	<link rel="stylesheet" href="css/index.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.css" integrity="sha512-C7hOmCgGzihKXzyPU/z4nv97W0d9bv4ALuuEbSf6hm93myico9qa0hv4dODThvCsqQUmKmLcJmlpRmCaApr83g==" crossorigin="anonymous" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css" integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w==" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.0/swiper-bundle.min.css">
 
 		<!-- Bootstrap js -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -116,7 +117,7 @@
 						</div>
 					</div>
 
-					<div class="col-md-2 form-group search-form">
+					<div class="col-md-3 col-sm-6 form-group search-form">
 						<select id="inputState1" class="form-control">
 						<option selected>Year</option>
 						<option>1</option>
@@ -134,28 +135,28 @@
 		<section id="counter">
 			<div class="row counter-div">
 				<div class="col-lg-3 col-md-6">
-					<div class="count-box" data-aos="zoom-in">
+					<div class="count-box" data-aos="zoom-in" data-aos-delay="100">
 						<i class="fas fa-user-friends"></i>
 						<span class="count">66</span><p>Faculties</p>
 					</div>
 				</div>
 
 				<div class="col-lg-3 col-md-6">
-					<div class="count-box" data-aos="zoom-in">
+					<div class="count-box" data-aos="zoom-in" data-aos-delay="200">
 						<i class="far fa-newspaper"></i>
 						<span class="count">1203</span><p>Publications</p>
 					</div>
 				</div>
 
 				<div class="col-lg-3 col-md-6">
-					<div class="count-box" data-aos="zoom-in">
+					<div class="count-box" data-aos="zoom-in" data-aos-delay="300">
 						<i class="fas fa-link"></i>
 						<span class="count">5636</span><p>Citations</p>
 					</div>
 				</div>
 
 				<div class="col-lg-3 col-md-6">
-					<div class="count-box" data-aos="zoom-in">
+					<div class="count-box" data-aos="zoom-in" data-aos-delay="400">
 						<i class="fas fa-graduation-cap"></i>
 						<span class="count">4</span><p>Departments</p>
 					</div>
@@ -164,115 +165,117 @@
 		</section>
 
 
-		<div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true, "autoPlay" : true}'>
-			<div class="gallery-cell">
-				<div>
-					<img src="img_prof1.jpg" alt="Prof 1" />
-				</div>
-				<div class="prof-slide-info">
-					<h2 class="profName">Prof Pritish Kumar Varadwaj</h2>
-					<h2 class="prof-department">
-						Department of Applied Sciences
-					</h2>
-				</div>
-				<div class="prof-stats">
-					<i class="fas fa-file-alt"></i>
-					<span>165</span>
-					<h6>Publications</h6>
+		<div class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="gallery-cell carousel-item col-md-3 col-sm-2">
+					<div>
+						<img src="img_prof1.jpg" alt="Prof 1" />
+					</div>
+					<div class="prof-slide-info">
+						<h2 class="profName">Prof Pritish Kumar Varadwaj</h2>
+						<h2 class="prof-department">
+							Department of Applied Sciences
+						</h2>
+					</div>
+					<div class="prof-stats">
+						<i class="fas fa-file-alt"></i>
+						<span>165</span>
+						<h6>Publications</h6>
 
-					<i class="fas fa-file-alt"></i>
-					<span>79</span>
-					<h6>Citations</h6>
+						<i class="fas fa-file-alt"></i>
+						<span>79</span>
+						<h6>Citations</h6>
+					</div>
+					<button class="btn btn-primary">View Profile</button>
 				</div>
-				<button class="btn btn-primary">View Profile</button>
-			</div>
 
-			<div class="gallery-cell">
-				<div>
-					<img src="img_prof2.jpg" alt="Prof 2" />
-				</div>
-				<div class="prof-slide-info">
-					<h2 class="profName">Prof Tapobrata Lahiri</h2>
-					<h2 class="prof-department">
-						Department of Applied Sciences
-					</h2>
-				</div>
-				<div class="prof-stats">
-					<i class="fas fa-file-alt"></i>
-					<span>165</span>
-					<h6>Publications</h6>
+				<div class="gallery-cell carousel-item col-md-3 col-sm-2">
+					<div>
+						<img src="img_prof2.jpg" alt="Prof 2" />
+					</div>
+					<div class="prof-slide-info">
+						<h2 class="profName">Prof Tapobrata Lahiri</h2>
+						<h2 class="prof-department">
+							Department of Applied Sciences
+						</h2>
+					</div>
+					<div class="prof-stats">
+						<i class="fas fa-file-alt"></i>
+						<span>165</span>
+						<h6>Publications</h6>
 
-					<i class="fas fa-file-alt"></i>
-					<span>79</span>
-					<h6>Citations</h6>
+						<i class="fas fa-file-alt"></i>
+						<span>79</span>
+						<h6>Citations</h6>
+					</div>
+					<button class="btn btn-primary">View Profile</button>
 				</div>
-				<button class="btn btn-primary">View Profile</button>
-			</div>
 
-			<div class="gallery-cell">
-				<div>
-					<img src="img_prof3.jpeg" alt="Prof 3" />
-				</div>
-				<div class="prof-slide-info">
-					<h2 class="profName">Dr Manish Kumar</h2>
-					<h2 class="prof-department">
-						Department of Applied Sciences
-					</h2>
-				</div>
-				<div class="prof-stats">
-					<i class="fas fa-file-alt"></i>
-					<span>165</span>
-					<h6>Publications</h6>
+				<div class="gallery-cell carousel-item col-md-3 col-sm-2">
+					<div>
+						<img src="img_prof3.jpeg" alt="Prof 3" />
+					</div>
+					<div class="prof-slide-info">
+						<h2 class="profName">Dr Manish Kumar</h2>
+						<h2 class="prof-department">
+							Department of Applied Sciences
+						</h2>
+					</div>
+					<div class="prof-stats">
+						<i class="fas fa-file-alt"></i>
+						<span>165</span>
+						<h6>Publications</h6>
 
-					<i class="fas fa-file-alt"></i>
-					<span>79</span>
-					<h6>Citations</h6>
+						<i class="fas fa-file-alt"></i>
+						<span>79</span>
+						<h6>Citations</h6>
+					</div>
+					<button class="btn btn-primary">View Profile</button>
 				</div>
-				<button class="btn btn-primary">View Profile</button>
-			</div>
 
-			<div class="gallery-cell">
-				<div>
-					<img src="img_prof4.jpg" alt="Prof 4" />
-				</div>
-				<div class="prof-slide-info">
-					<h2 class="profName">Dr Pramod Kumar</h2>
-					<h2 class="prof-department">
-						Department of Applied Sciences
-					</h2>
-				</div>
-				<div class="prof-stats">
-					<i class="fas fa-file-alt"></i>
-					<span>165</span>
-					<h6>Publications</h6>
+				<div class="gallery-cell carousel-item col-md-3 col-sm-2">
+					<div>
+						<img src="img_prof4.jpg" alt="Prof 4" />
+					</div>
+					<div class="prof-slide-info">
+						<h2 class="profName">Dr Pramod Kumar</h2>
+						<h2 class="prof-department">
+							Department of Applied Sciences
+						</h2>
+					</div>
+					<div class="prof-stats">
+						<i class="fas fa-file-alt"></i>
+						<span>165</span>
+						<h6>Publications</h6>
 
-					<i class="fas fa-file-alt"></i>
-					<span>79</span>
-					<h6>Citations</h6>
+						<i class="fas fa-file-alt"></i>
+						<span>79</span>
+						<h6>Citations</h6>
+					</div>
+					<button class="btn btn-primary">View Profile</button>
 				</div>
-				<button class="btn btn-primary">View Profile</button>
-			</div>
 
-			<div class="gallery-cell">
-				<div>
-					<img src="img_prof5.png" alt="Prof 5" />
-				</div>
-				<div class="prof-slide-info">
-					<h2 class="profName">Prof Krishna Misra</h2>
-					<h2 class="prof-department">
-						Department of Applied Sciences
-					</h2>
-				</div>
-				<div class="prof-stats">
-					<i class="fas fa-file-alt"></i>
-					<span>165</span>
-					<h6>Publications</h6>
+				<div class="gallery-cell carousel-item active col-md-3 col-sm-2">
+					<div>
+						<img src="img_prof5.png" alt="Prof 5" />
+					</div>
+					<div class="prof-slide-info">
+						<h2 class="profName">Prof Krishna Misra</h2>
+						<h2 class="prof-department">
+							Department of Applied Sciences
+						</h2>
+					</div>
+					<div class="prof-stats">
+						<i class="fas fa-file-alt"></i>
+						<span>165</span>
+						<h6>Publications</h6>
 
-					<i class="fas fa-file-alt"></i>
-					<span>79</span>
-					<h6>Citations</h6>
+						<i class="fas fa-file-alt"></i>
+						<span>79</span>
+						<h6>Citations</h6>
+					</div>
+					<button class="btn btn-primary">View Profile</button>
 				</div>
-				<button class="btn btn-primary">View Profile</button>
 			</div>
 		</div>
 		<div class="bar_graph" style="margin: 5% 20% 5% 20%;">
@@ -297,12 +300,23 @@
 		<!--bar graph -->
 		<!-- <div class="row"></div> -->
 
+	<!-- Section (Footer) -->
+
+	<section class="footer">
+		<div class="footer-div">
+			<p>
+				<a href="https://iiita.ac.in/">Main Site</a> | <a href="https://iiita.ac.in/contact">Contact</a> | <a href="https://iiita.ac.in/rti">RTI</a> | <a href="https://iiita.ac.in/administration/">Administration</a>
+			</p>
+				Indian Institute of Information Technology Allahabad<br>
+			Devghat, Jhalwa, Prayagraj-211015, U. P. INDIA<br>
+			Phone: 91-532-2922025,    Fax: 91-532-2922125,   Email: contact@iiita.ac.in 
+		</div>
+	</section>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-    <script async src="dist/purecounter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.0/swiper-bundle.min.js"></script>
     <script src="./javascript/index.js"></script>
+
 
 	</body>
 </html>
