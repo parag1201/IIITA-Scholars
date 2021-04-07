@@ -74,6 +74,14 @@ app.get('/', function (req, res) {
     res.render('home.hbs', {profs});
 });
 
+// app.get('/profile/:prof_id', function (req, res) {
+// 	res.render('profile.hbs', req.params.id);
+// })
+
+app.get('/profile/:id', function(req, res){
+	res.render('profile.hbs', req.params.id);
+});
+
 app.listen(port, () => {
 	console.log(`Server is on port ${port}`);
 });
