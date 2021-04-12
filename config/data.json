@@ -1,56 +1,18 @@
 [
 	{
-		"name": "Dr. Shishur Verma",
-		"scholar_id": "68461568",
-		"orcid_id": "s45djcas4",
-		"department": "Department ofInformation Technology",
-		"citations": "54",
-		"publications": "167",
-		"avatar_url": "/images/img_prof1.jpg"
-	},
-	{
-		"name": "Dr. Shishur Verma",
-		"scholar_id": "68461568",
-		"orcid_id": "s45djcas4",
-		"department": "Department ofInformation Technology",
-		"citations": "54",
-		"publications": "167",
-		"avatar_url": "/images/img_prof1.jpg"
-	},
-	{
-		"name": "Dr. Shishur Verma",
-		"scholar_id": "68461568",
-		"orcid_id": "s45djcas4",
-		"department": "Department ofInformation Technology",
-		"citations": "54",
-		"publications": "167",
-		"avatar_url": "/images/img_prof1.jpg"
-	},
-	{
-		"name": "Dr. Shishur Verma",
-		"scholar_id": "68461568",
-		"orcid_id": "s45djcas4",
-		"department": "Department ofInformation Technology",
-		"citations": "54",
-		"publications": "167",
-		"avatar_url": "/images/img_prof1.jpg"
-	},
-	{
-		"name": "Dr. Shishur Verma",
-		"scholar_id": "68461568",
-		"orcid_id": "s45djcas4",
-		"department": "Department ofInformation Technology",
-		"citations": "54",
-		"publications": "167",
-		"avatar_url": "/images/img_prof1.jpg"
-	},
-	{
-		"name": "Dr. Shishur Verma",
-		"scholar_id": "68461568",
-		"orcid_id": "s45djcas4",
-		"department": "Department ofInformation Technology",
-		"citations": "54",
-		"publications": "167",
-		"avatar_url": "/images/img_prof1.jpg"
+		"name": "Pavan Chakraborty",
+		"status": "Professor at Indian Institute of Information Technology, Allahabad",
+		"scholar_id":"wm_7a-0AAAAJ",
+		"orcid_id":"0000-0002-9260-1131",
+		"microsoft_id":"2156131321",
+		"avatar":"/images/pavan_chakra.jpg",
+		"education":[{
+			"from": "2001",
+			"degree": "Ph.D",
+			"university": "Bangalore University"
+		}],
+		"expertise":["Human gait analysis", "Human prosthetics", "Bio-metrics, Image processing", "Graphics and visual computing", "Graphical projections", "Robotics and instrumentation", "Real time simulation", "High performance computing (HPC)", "Artificial life simulation and intelligence", "Human computer interaction", "Astronomy and astrophysics", "Large astronomical data", "Machine learning", "Big data analytics", "Cometary jets simulation"],
+		"countCitations" : 1049,
+		"countPublications":102
 	}
 ]
