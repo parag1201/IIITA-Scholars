@@ -20,6 +20,7 @@
   "dependencies": {
     "@srexi/purecounterjs": "^1.1.1",
     "chart.js": "^2.9.4",
+    "config": "^3.3.6",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.1",
     "mongoose": "^5.12.3",
