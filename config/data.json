@@ -3,16 +3,119 @@
 		"name": "Pavan Chakraborty",
 		"status": "Professor at Indian Institute of Information Technology, Allahabad",
 		"scholar_id":"wm_7a-0AAAAJ",
+		"department": "Information Technology",
 		"orcid_id":"0000-0002-9260-1131",
 		"microsoft_id":"2156131321",
-		"avatar":"/images/pavan_chakra.jpg",
+		"avatar_url":"/images/img_prof1.jpg",
 		"education":[{
 			"from": "2001",
 			"degree": "Ph.D",
 			"university": "Bangalore University"
 		}],
 		"expertise":["Human gait analysis", "Human prosthetics", "Bio-metrics, Image processing", "Graphics and visual computing", "Graphical projections", "Robotics and instrumentation", "Real time simulation", "High performance computing (HPC)", "Artificial life simulation and intelligence", "Human computer interaction", "Astronomy and astrophysics", "Large astronomical data", "Machine learning", "Big data analytics", "Cometary jets simulation"],
-		"countCitations" : 1049,
-		"countPublications":102
+		"citations" : 1049,
+		"publications":102
+	},
+	{
+		"name": "Pavan Chakraborty",
+		"status": "Professor at Indian Institute of Information Technology, Allahabad",
+		"scholar_id":"wm_7a-0AAAAJ",
+		"department": "Information Technology",
+		"orcid_id":"0000-0002-9260-1131",
+		"microsoft_id":"2156131321",
+		"avatar_url":"/images/img_prof1.jpg",
+		"education":[{
+			"from": "2001",
+			"degree": "Ph.D",
+			"university": "Bangalore University"
+		}],
+		"expertise":["Human gait analysis", "Human prosthetics", "Bio-metrics, Image processing", "Graphics and visual computing", "Graphical projections", "Robotics and instrumentation", "Real time simulation", "High performance computing (HPC)", "Artificial life simulation and intelligence", "Human computer interaction", "Astronomy and astrophysics", "Large astronomical data", "Machine learning", "Big data analytics", "Cometary jets simulation"],
+		"citations" : 1049,
+		"publications":102
+	},
+	{
+		"name": "Pavan Chakraborty",
+		"status": "Professor at Indian Institute of Information Technology, Allahabad",
+		"scholar_id":"wm_7a-0AAAAJ",
+		"department": "Information Technology",
+		"orcid_id":"0000-0002-9260-1131",
+		"microsoft_id":"2156131321",
+		"avatar_url":"/images/img_prof1.jpg",
+		"education":[{
+			"from": "2001",
+			"degree": "Ph.D",
+			"university": "Bangalore University"
+		}],
+		"expertise":["Human gait analysis", "Human prosthetics", "Bio-metrics, Image processing", "Graphics and visual computing", "Graphical projections", "Robotics and instrumentation", "Real time simulation", "High performance computing (HPC)", "Artificial life simulation and intelligence", "Human computer interaction", "Astronomy and astrophysics", "Large astronomical data", "Machine learning", "Big data analytics", "Cometary jets simulation"],
+		"citations" : 1049,
+		"publications":102
+	},
+	{
+		"name": "Pavan Chakraborty",
+		"status": "Professor at Indian Institute of Information Technology, Allahabad",
+		"scholar_id":"wm_7a-0AAAAJ",
+		"department": "Information Technology",
+		"orcid_id":"0000-0002-9260-1131",
+		"microsoft_id":"2156131321",
+		"avatar_url":"/images/img_prof1.jpg",
+		"education":[{
+			"from": "2001",
+			"degree": "Ph.D",
+			"university": "Bangalore University"
+		}],
+		"expertise":["Human gait analysis", "Human prosthetics", "Bio-metrics, Image processing", "Graphics and visual computing", "Graphical projections", "Robotics and instrumentation", "Real time simulation", "High performance computing (HPC)", "Artificial life simulation and intelligence", "Human computer interaction", "Astronomy and astrophysics", "Large astronomical data", "Machine learning", "Big data analytics", "Cometary jets simulation"],
+		"citations" : 1049,
+		"publications":102
+	},
+	{
+		"name": "Pavan Chakraborty",
+		"status": "Professor at Indian Institute of Information Technology, Allahabad",
+		"scholar_id":"wm_7a-0AAAAJ",
+		"department": "Information Technology",
+		"orcid_id":"0000-0002-9260-1131",
+		"microsoft_id":"2156131321",
+		"avatar_url":"/images/img_prof1.jpg",
+		"education":[{
+			"from": "2001",
+			"degree": "Ph.D",
+			"university": "Bangalore University"
+		}],
+		"expertise":["Human gait analysis", "Human prosthetics", "Bio-metrics, Image processing", "Graphics and visual computing", "Graphical projections", "Robotics and instrumentation", "Real time simulation", "High performance computing (HPC)", "Artificial life simulation and intelligence", "Human computer interaction", "Astronomy and astrophysics", "Large astronomical data", "Machine learning", "Big data analytics", "Cometary jets simulation"],
+		"citations" : 1049,
+		"publications":102
+	},
+	{
+		"name": "Pavan Chakraborty",
+		"status": "Professor at Indian Institute of Information Technology, Allahabad",
+		"scholar_id":"wm_7a-0AAAAJ",
+		"department": "Information Technology",
+		"orcid_id":"0000-0002-9260-1131",
+		"microsoft_id":"2156131321",
+		"avatar_url":"/images/img_prof1.jpg",
+		"education":[{
+			"from": "2001",
+			"degree": "Ph.D",
+			"university": "Bangalore University"
+		}],
+		"expertise":["Human gait analysis", "Human prosthetics", "Bio-metrics, Image processing", "Graphics and visual computing", "Graphical projections", "Robotics and instrumentation", "Real time simulation", "High performance computing (HPC)", "Artificial life simulation and intelligence", "Human computer interaction", "Astronomy and astrophysics", "Large astronomical data", "Machine learning", "Big data analytics", "Cometary jets simulation"],
+		"citations" : 1049,
+		"publications":102
+	},
+	{
+		"name": "Pavan Chakraborty",
+		"status": "Professor at Indian Institute of Information Technology, Allahabad",
+		"scholar_id":"wm_7a-0AAAAJ",
+		"department": "Information Technology",
+		"orcid_id":"0000-0002-9260-1131",
+		"microsoft_id":"2156131321",
+		"avatar_url":"/images/img_prof1.jpg",
+		"education":[{
+			"from": "2001",
+			"degree": "Ph.D",
+			"university": "Bangalore University"
+		}],
+		"expertise":["Human gait analysis", "Human prosthetics", "Bio-metrics, Image processing", "Graphics and visual computing", "Graphical projections", "Robotics and instrumentation", "Real time simulation", "High performance computing (HPC)", "Artificial life simulation and intelligence", "Human computer interaction", "Astronomy and astrophysics", "Large astronomical data", "Machine learning", "Big data analytics", "Cometary jets simulation"],
+		"citations" : 1049,
+		"publications":102
 	}
 ]

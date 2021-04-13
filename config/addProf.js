@@ -13,7 +13,7 @@ const addProfs = async () => {
         } catch (error) {
             console.error('Error');
         }
-    })
+    });
 };
 
 module.exports = addProfs;

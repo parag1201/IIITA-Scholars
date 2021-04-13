@@ -1,84 +1,26 @@
-import profData from './config/data.json';
+// import profData from './config/data.json';
 const express = require('express');
 const exphbs = require('express-handlebars');
+const connectDB = require('./config/db');
+const profData = require('./config/data.json');
 
 const port = process.env.PORT || 4000;
 var app = express();
 
 app.engine('.hbs', exphbs({extname: '.hbs', defaultLayout: false}))
 app.set('view engine', '.hbs');
-console.log(__dirname);
 app.use(express.static(__dirname + '/public'));
 
-// const profs = 
-// [
-// 	{
-// 		name: "Dr. Shishur Verma",
-// 		scholar_id: "68461568",
-// 		orcut_id: "s45djcas4",
-// 		department: "Department of Information Technology",
-// 		citations: "54",
-// 		publications: "167",
-// 		avatar_url: "/images/img_prof1.jpg",
-// 	},
-// 	{
-// 		name: "Dr. Shishur Verma",
-// 		scholar_id: "68461568",
-// 		orcut_id: "s45djcas4",
-// 		department: "Department of Information Technology",
-// 		citations: "54",
-// 		publications: "167",
-// 		avatar_url: "/images/img_prof2.jpg",
-// 	},
-// 	{
-// 		name: "Dr. Shishur Verma",
-// 		scholar_id: "68461568",
-// 		orcut_id: "s45djcas4",
-// 		department: "Department of Information Technology",
-// 		citations: "54",
-// 		publications: "167",
-// 		avatar_url: "/images/img_prof4.jpg",
-// 	},
-// 	{
-// 		name: "Dr. Shishur Verma",
-// 		scholar_id: "68461568",
-// 		orcut_id: "s45djcas4",
-// 		department: "Department ofInformation Technology",
-// 		citations: "54",
-// 		publications: "167",
-// 		avatar_url: "/images/img_prof5.png",
-// 	},
-// 	{
-// 		name: "Dr. Shishur Verma",
-// 		scholar_id: "68461568",
-// 		orcut_id: "s45djcas4",
-// 		department: "Department ofInformation Technology",
-// 		citations: "54",
-// 		publications: "167",
-// 		avatar_url: "/images/img_prof3.jpeg",
-// 	},
-// 	{
-// 		name: "Dr. Shishur Verma",
-// 		scholar_id: "68461568",
-// 		orcut_id: "s45djcas4",
-// 		department: "Department ofInformation Technology",
-// 		citations: "54",
-// 		publications: "167",
-// 		avatar_url: "/images/img_prof1.jpg",
-// 	},
-// ];
+app.use(express.json({extended: false}));
+
+connectDB();
 
 app.get('/', function (req, res) {
     res.render('home.hbs', {profData});
 });
 
-// app.get('/profile/:prof_id', function (req, res) {
-// 	res.render('profile.hbs', req.params.id);
-// })
-
-app.get('/profile/:id', function(req, res){
-	res.render('profile.hbs', req.params.id);
-});
+app.use('/profiles', require('./routes/profile'));
+app.use('/publications', require('./routes/publication'));
 
 app.listen(port, () => {
 	console.log(`Server is on port ${port}`);

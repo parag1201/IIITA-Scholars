@@ -39,4 +39,4 @@ const PublicationSchema = new mongoose.Schema({
     },
 })
 
-module.exports = Publication = mongoose.model('publication', ProfSchema)
+module.exports = Publication = mongoose.model('publication', PublicationSchema)

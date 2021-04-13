@@ -2,13 +2,13 @@
     <section class="carousel">
         <div class="swiper-container" data-aos="zoom-out-left">
             <div class="swiper-wrapper">
-                {{#each profs as |prof|}}
+                {{#each profData as |prof|}}
                     <div class="swiper-slide">
                         <div class="prof-card">
                             <img src={{prof.avatar_url}} alt="">
                             <br />
                             <span>{{prof.name}}</span>
-                            <p>{{prof.department}}</p>
+                            <p>Department of {{prof.department}}</p>
                             <div class="card-content">
                                 <i class="far fa-newspaper"></i> {{prof.publications}} Publications
                                 <br />
