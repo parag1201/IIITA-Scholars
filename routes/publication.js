@@ -9,12 +9,12 @@ const Publication = require("../models/publication");
 router.get("/", async (req, res) => {
 	try {
 		const papers = await Publication.find();
-		if (profiles.length === 0) {
+		if (papers.length === 0) {
 			return res.status(400).json({ msg: "No papers found" });
 		}
-		res.json(profiles);
+		res.json(papers);
 	} catch (error) {
-		console.error(error.mesage);
+		console.error(error.message);
 		res.status(500).json({ msg: "Server Error" });
 	}
 });
