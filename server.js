@@ -13,7 +13,10 @@ const dbURI =
 
 mongoose
     .connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then((result) => app.listen(3000))
+    .then((result) => {
+        app.listen(port)
+        console.log('Server is on port ' + port)
+    })
     .catch((err) => console.log(err))
 
 app.engine('.hbs', exphbs({ extname: '.hbs', defaultLayout: false }))
@@ -21,6 +24,10 @@ app.set('view engine', '.hbs')
 
 app.use(express.static(__dirname + '/public'))
 app.use(express.urlencoded({ extended: true }))
+app.use((req, res, next) => {
+    res.locals.path = req.path
+    next()
+})
 //connectDB();
 
 app.get('/', function (req, res) {
@@ -29,7 +36,3 @@ app.get('/', function (req, res) {
 
 app.use('/profiles', require('./routes/profile'))
 app.use('/publications', require('./routes/publication'))
-
-app.listen(port, () => {
-    console.log(`Server is on port ${port}`)
-})
