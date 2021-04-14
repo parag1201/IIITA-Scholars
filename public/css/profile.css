@@ -18,3 +18,39 @@
         height: 150px;
     }
 }
+
+/* Content */
+
+#prof-content {
+    padding: 2% 10%;
+}
+
+.prof-header-img,
+.prof-header-content {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.prof-header-content {
+    padding-left: 3%;
+}
+
+.prof-header-img > img {
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+}
+
+.prof-header-content > p {
+    font-size: 2.3rem;
+    font-weight: 500;
+}
+
+.prof-articles {
+    padding-top: 3%;
+}
+
+.article-header {
+    font-size: 1.5rem;
+    background-color: rgb(250, 247, 243);
+}

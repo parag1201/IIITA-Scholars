@@ -14,7 +14,32 @@
 </head>
 <body>
     {{> header}}
-    hello {{profData.name}}
+    
+    <section id="prof-content">
+        <div class="row">
+            <div class="prof-info col-lg-9">
+                <div class="prof-header-img">
+                    <img src="{{profData.avatar_url}}" alt="">
+                </div>
+                <div class="prof-header-content">
+                    <p>{{profData.name}}</p>
+                    <span>{{profData.status}}</span> <br>
+                    <span>Department of {{profData.department}}</span>
+                </div>
+
+                <div class="prof-articles">
+                    <div class="article-header">
+                        <span>Articles</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prof-stats col-lg-3">
+                hello
+            </div>
+        </div>
+    </section>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
