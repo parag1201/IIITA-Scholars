@@ -53,4 +53,20 @@
 .article-header {
     font-size: 1.5rem;
     background-color: rgb(250, 247, 243);
+    padding-bottom: 5px;
+}
+
+.article {
+    box-shadow: 10px 5px 10px 5px #ececec;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.article > a {
+    font-size: 1.2rem;
+}
+
+.article-info {
+    font-size: 0.8rem;
+    color: grey;
 }

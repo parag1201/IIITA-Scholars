@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const Profile = require('../models/profile')
+const Publication = require('../models/publication')
 
 // @route    GET /all
 // @desc     get all profs
@@ -21,12 +22,25 @@ router.get('/', (req, res) => {
 // @access   Public
 
 router.get('/:id', (req, res) => {
-    var profData
+    var profData = {}
     var articles = []
     Profile.findById(req.params.id)
         .lean()
         .then((result) => {
-            profData = result
+            Publication.find()
+                .lean()
+                .then((papers) => {
+                    papers.forEach((paper) => {
+                        paper.authors = paper.authors.slice(1)
+                    })
+                    res.render('../views/profile', {
+                        profData: result,
+                        articles: papers,
+                    })
+                })
+                .catch((err) => {
+                    console.log(err)
+                })
         })
         .catch((err) => {
             console.log(err)
@@ -44,9 +58,6 @@ router.get('/:id', (req, res) => {
     //     .catch((err) => {
     //         console.log(err)
     //     })
-
-    console.log(profData)
-    res.render('../views/profile', { profData, articles })
 })
 
 module.exports = router

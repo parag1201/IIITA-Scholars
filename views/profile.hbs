@@ -31,6 +31,25 @@
                     <div class="article-header">
                         <span>Articles</span>
                     </div>
+
+                    <div class="article-list">
+                        {{#each articles as |article|}}
+                        <div class="article">
+                            <a href="{{article.publicationLink}}">{{article.title}}</a> <br>
+                            <div class="article-info">
+                            {{#each article.authors as |author|}}
+                                {{author}}, 
+                            {{/each}}
+                            </div>
+                            <div class="article-info">
+                            {{article.journal}} {{article.conference}}
+                            </div>
+                            <div class="article-info">
+                            {{article.citations}} {{article.date}}
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
                 </div>
             </div>
 
