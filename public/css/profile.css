@@ -1,0 +1,20 @@
+/* Navbar */
+
+.navbar {
+    padding: 0% 10%;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: blue;
+}
+
+@media screen and (max-width: 1200px) {
+    .navbar-brand > img {
+        width: 450px;
+    }
+
+    .gallery-cell img {
+        width: 150px;
+        height: 150px;
+    }
+}

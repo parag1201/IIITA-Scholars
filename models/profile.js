@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const ProfSchema = new mongoose.Schema({
+const ProfileSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
@@ -9,10 +9,10 @@ const ProfSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-	department : {
-		type: String,
+    department: {
+        type: String,
         required: true,
-	},
+    },
     scholar_id: {
         type: String,
     },
@@ -36,4 +36,4 @@ const ProfSchema = new mongoose.Schema({
     },
 })
 
-module.exports = Prof = mongoose.model('prof', ProfSchema)
+module.exports = Prof = mongoose.model('profile', ProfileSchema)
