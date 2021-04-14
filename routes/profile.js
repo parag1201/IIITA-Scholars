@@ -23,6 +23,7 @@ router.get('/all', async (req, res) => {
 
 router.get('/:id', (req, res) => {
     Profile.findById(req.params.id)
+        .lean()
         .then((result) => {
             res.render('../views/profile', { profData: result })
         })
