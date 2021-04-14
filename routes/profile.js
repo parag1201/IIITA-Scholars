@@ -1,19 +1,18 @@
 const express = require('express')
 const router = express.Router()
 const Profile = require('../models/profile')
-const Publication = require('../models/publication')
 
 // @route    GET /all
 // @desc     get all profs
 // @access   Public
 
-router.get('/all', async (req, res) => {
+router.get('/', (req, res) => {
     Profile.find()
         .then((result) => {
-            console.log(result)
+            res.json(result)
         })
         .catch((err) => {
-            console.log(err)
+            console.log(err.message)
         })
 })
 
