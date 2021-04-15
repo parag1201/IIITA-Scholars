@@ -7,6 +7,7 @@
 
     {{!-- CSS Files --}}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" type=""/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"/>
 
     <link rel="stylesheet" href="../css/profile.css" type="text/css"/>
 
@@ -18,15 +19,35 @@
     <section id="prof-content">
         <div class="row">
             <div class="prof-info col-lg-9">
-                <div class="prof-header-img">
-                    <img src="{{profData.avatar_url}}" alt="">
+                <div class="prof-header">
+                    <div class="prof-header-img">
+                        <img src="{{profData.avatar_url}}" alt="">
+                    </div>
+                    <div class="prof-header-content">
+                        <p>{{profData.name}}</p>
+                        <span>{{profData.status}}</span> <br>
+                        <span>Department of {{profData.department}}</span> <br> <br>
+                        <i class="far fa-newspaper"></i>
+                        <span class="count">{{profData.countPublications}} Publications</span> <br>
+                        <i class="fas fa-link"></i>
+                        <span class="count">{{profData.countCitations}} Citations</span>
+                    </div>
+                    <div class="prof-header-ids">
+                        <span><em>Other profiles</em></span> 
+                        {{#if profData.scholar_id}}
+                        <div class="prof-id"><i class="fab fa-google"></i><a href="https://scholar.google.co.in/citations?user={{profData.scholar_id}}" target="_blank"> Google Scholar</a></div>
+                        {{/if}}                        
+                        {{#if profData.orcid_id}}
+                        <div class="prof-id"><i class="fab fa-orcid"></i><a href="https://orcid.org/{{profData.orcid_id}}" target="_blank"> Orcid</a></div>
+                        {{/if}}  
+                        {{#if profData.microsoft_id}}
+                        <div class="prof-id"><i class="fab fa-microsoft"></i><a href="https://academic.microsoft.com/author/{{profData.microsoft_id}}" target="_blank"> Microsoft Academic</a></div>
+                        {{/if}}  
+                        {{#if profData.scopus_id}}
+                        <div class="prof-id"><i class="fab fa-stripe-s"></i><a href="https://www.scopus.com/authid/detail.uri?authorId={{profData.scopus_id}}" target="_blank"> Scopus</a></div>
+                        {{/if}}  
+                    </div>
                 </div>
-                <div class="prof-header-content">
-                    <p>{{profData.name}}</p>
-                    <span>{{profData.status}}</span> <br>
-                    <span>Department of {{profData.department}}</span>
-                </div>
-
                 <div class="prof-articles">
                     <div class="article-header">
                         <span>Articles</span>
@@ -35,18 +56,28 @@
                     <div class="article-list">
                         {{#each articles as |article|}}
                         <div class="article">
-                            <a href="{{article.publicationLink}}">{{article.title}}</a> <br>
-                            <div class="article-info">
-                            {{#each article.authors as |author|}}
-                                {{author}}, 
-                            {{/each}}
-                            </div>
-                            <div class="article-info">
-                            {{article.journal}} {{article.conference}}
-                            </div>
-                            <div class="article-info">
-                            {{article.citations}} {{article.date}}
-                            </div>
+                            <div class="article-title">
+                                <div class="article-link">
+                                    <a href="{{article.publicationLink}}" target="_blank">{{article.title}}</a> <br>
+                                    <div class="article-info">
+                                    {{#each article.authors as |author|}}
+                                        {{author}}, 
+                                    {{/each}}
+                                    </div>
+                                    <div class="article-info">
+                                    {{article.journal}} {{article.conference}}
+                                    </div>
+                                    <hr>   
+                                    <button type="button" class="btn btn-secondary btn-sm">View Abstract</button>
+                                    <button type="button" class="btn btn-secondary btn-sm">View Summary</button>                                
+                                </div>
+                                <div class="article-citations">
+                                    <i class="fas fa-link"></i>
+                                    <span class="count"> {{article.citations}}</span> <br>
+                                    <i class="far fa-calendar-alt"></i>
+                                    <span class="count"> 2016</span>
+                                </div>
+                            </div>                            
                         </div>
                         {{/each}}
                     </div>

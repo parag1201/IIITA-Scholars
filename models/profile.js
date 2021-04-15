@@ -22,6 +22,9 @@ const ProfileSchema = new mongoose.Schema({
     microsoft_id: {
         type: String,
     },
+    scopus_id: {
+        type: String,
+    },
     avatar: {
         type: String,
     },
