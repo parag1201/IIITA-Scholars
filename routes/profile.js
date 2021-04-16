@@ -33,6 +33,7 @@ router.get('/:id', (req, res) => {
                     papers.forEach((paper) => {
                         paper.authors = paper.authors.slice(1)
                     })
+                    console.log(result)
                     res.render('../views/profile', {
                         profData: result,
                         articles: papers,

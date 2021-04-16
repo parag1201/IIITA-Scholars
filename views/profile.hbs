@@ -18,7 +18,7 @@
     
     <section id="prof-content">
         <div class="row">
-            <div class="prof-info col-lg-9">
+            <div class="prof-info col-lg-8">
                 <div class="prof-header">
                     <div class="prof-header-img">
                         <img src="{{profData.avatar_url}}" alt="">
@@ -75,17 +75,17 @@
                                     <i class="fas fa-link"></i>
                                     <span class="count"> {{article.citations}}</span> <br>
                                     <i class="far fa-calendar-alt"></i>
-                                    <span class="count"> 2016</span>
+                                    <span class="count"> {{article.year}}</span>
                                 </div>
                             </div>                            
                         </div>
                         {{/each}}
                     </div>
-                </div>
+                </div>                
             </div>
 
-            <div class="prof-stats col-lg-3">
-                hello
+            <div class="prof-stats col-lg-4">
+                {{> citationsGraph}}                
             </div>
         </div>
     </section>

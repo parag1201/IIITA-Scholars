@@ -30,7 +30,7 @@ const PublicationSchema = new mongoose.Schema({
         type: String,
     },
     year: {
-        type: Date,
+        type: Number,
         required: true,
     },
     citations: {
