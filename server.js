@@ -19,7 +19,18 @@ mongoose
     })
     .catch((err) => console.log(err))
 
-app.engine('.hbs', exphbs({ extname: '.hbs', defaultLayout: false }))
+app.engine(
+    '.hbs',
+    exphbs({
+        extname: '.hbs',
+        defaultLayout: false,
+        helpers: {
+            json: function (context) {
+                return JSON.stringify(context)
+            },
+        },
+    })
+)
 app.set('view engine', '.hbs')
 
 app.use(express.static(__dirname + '/public'))

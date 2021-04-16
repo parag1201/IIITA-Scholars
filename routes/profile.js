@@ -22,8 +22,6 @@ router.get('/', (req, res) => {
 // @access   Public
 
 router.get('/:id', (req, res) => {
-    var profData = {}
-    var articles = []
     Profile.findById(req.params.id)
         .lean()
         .then((result) => {
@@ -33,7 +31,6 @@ router.get('/:id', (req, res) => {
                     papers.forEach((paper) => {
                         paper.authors = paper.authors.slice(1)
                     })
-                    console.log(result)
                     res.render('../views/profile', {
                         profData: result,
                         articles: papers,
