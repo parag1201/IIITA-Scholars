@@ -9,9 +9,10 @@ const Publication = require('../models/publication')
 
 router.get('/', (req, res) => {
     Profile.find()
-        .then((profData) => {
-            console.log(profData);
-            res.render('../views/facultiesPage', profData);
+        .lean()
+        .then((result) => {
+            console.log(result)
+            res.render('../views/facultiesPage', { profData: result })
         })
         .catch((err) => {
             console.log(err.message)
