@@ -1,10 +1,39 @@
 <faculties>
-    <div class="container prof-list">
+    <div class="grid-container prof-list">
         {{#each profData as |prof|}}
-            <h2>{{prof.name}}</h2>
             <div class="prof-list-item">
-                <div class="prof-header-img">
+                <div class="prof-avatar">
                     <img src={{prof.avatar_url}} alt={{prof.name}}>
+                </div>
+                <div class="prof-info">
+                    <h5>{{prof.name}}</h5>
+                    <p>{{prof.status}}</p>
+                    <p>Department of {{prof.department}}</p>
+                    <div class="prof-data">
+                        <div class="prof-data-ids">
+                            {{#if prof.scholar_id}}
+                                <div class="prof-id"><i class="fab fa-google"></i><a href="https://scholar.google.co.in/citations?user={{prof.scholar_id}}" target="_blank"> Google Scholar</a></div>
+                            {{/if}}                        
+                            {{#if prof.orcid_id}}
+                                <div class="prof-id"><i class="fab fa-orcid"></i><a href="https://orcid.org/{{prof.orcid_id}}" target="_blank"> Orcid</a></div>
+                            {{/if}}  
+                            {{#if prof.microsoft_id}}
+                                <div class="prof-id"><i class="fab fa-microsoft"></i><a href="https://academic.microsoft.com/author/{{prof.microsoft_id}}" target="_blank"> Microsoft Academic</a></div>
+                            {{/if}}  
+                            {{#if prof.scopus_id}}
+                                <div class="prof-id"><i class="fab fa-stripe-s"></i><a href="https://www.scopus.com/authid/detail.uri?authorId={{prof.scopus_id}}" target="_blank"> Scopus</a></div>
+                            {{/if}}
+                        </div>
+                        <div class="count">
+                            <div class="count-pub">
+                                <i class="far fa-newspaper"></i>  {{prof.countPublications}}
+                            </div>
+                            <div class="count-cit">
+                                <i class="fas fa-link"></i> {{prof.countCitations}}
+                            </div>
+                        </div>
+                    </div>
+                    <a href="http://localhost:4000/profiles/{{prof._id}}"><button class="btn btn-primary profile-link">View Profile</button></a>
                 </div>
             </div>
         {{/each}}
