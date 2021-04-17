@@ -1,0 +1,12 @@
+<faculties>
+    <div class="container prof-list">
+        {{#each profData as |prof|}}
+            <h2>{{prof.name}}</h2>
+            <div class="prof-list-item">
+                <div class="prof-header-img">
+                    <img src={{prof.avatar_url}} alt={{prof.name}}>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</faculties>
