@@ -8,11 +8,12 @@ const Publication = require("../models/publication");
 
 router.get("/", async (req, res) => {
 	try {
-		const papers = await Publication.find();
-		if (profiles.length === 0) {
+		const result = await Publication.find().lean();
+		if (result.length === 0) {
 			return res.status(400).json({ msg: "No papers found" });
 		}
-		res.json(profiles);
+		console.log(result);
+		res.render('../views/search.hbs', {papers: result});
 	} catch (error) {
 		console.error(error.mesage);
 		res.status(500).json({ msg: "Server Error" });

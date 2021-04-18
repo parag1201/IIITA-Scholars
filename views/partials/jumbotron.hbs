@@ -1,54 +1,56 @@
 <jumbotron>
     <div class="container-fluid search-div" data-aos="fade-up">
-        <form action="#">
-            <div class="form-row">
-                <div class="col-md-8 form-group">
-                    <label class="search-label">Search for publications</label>
-                    <input class="form-control" type="text" placeholder="Enter keywords..."/>
-                </div>
-                <div class="col-md-4 form-group">
-                    <label class="search-label">Select Faculty</label>
-                    <select id="inputState" class="form-control">
-                        <option selected>All</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="col-md-6 dept">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" checked/>
-                        <label class="form-check-label" for="inlineCheckbox1">Department of Applied Sciences</label>
+        <div class="dark-overlay">
+            <form action="#">
+                <div class="form-row">
+                    <div class="col-md-8 form-group">
+                        <label class="search-label">Search for publications</label>
+                        <input class="form-control" type="text" placeholder="Enter keywords..."/>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" checked/>
-                        <label class="form-check-label" for="inlineCheckbox2">Department of Electronics and Communication Engineering</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" checked/>
-                        <label class="form-check-label" for="inlineCheckbox3" >Department of Information Technology</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4" checked />
-                        <label class="form-check-label" for="inlineCheckbox4" >Department of Management Studies</label >
+                    <div class="col-md-4 form-group">
+                        <label class="search-label">Select Faculty</label>
+                        <select id="inputState" class="form-control">
+                            <option selected>All</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
                     </div>
                 </div>
 
-                <div class="col-md-3 col-sm-6 form-group search-form">
-                    <select id="inputState1" class="form-control">
-                        <option selected>Year</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                    </select>
-                    <button type="button" class="btn btn-primary">
-                        <i class="fas fa-search"></i> Search
-                    </button>
+                <div class="form-row">
+                    <div class="col-md-6 dept">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" checked/>
+                            <label class="form-check-label" for="inlineCheckbox1">Department of Applied Sciences</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" checked/>
+                            <label class="form-check-label" for="inlineCheckbox2">Department of Electronics and Communication Engineering</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" checked/>
+                            <label class="form-check-label" for="inlineCheckbox3" >Department of Information Technology</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4" checked />
+                            <label class="form-check-label" for="inlineCheckbox4" >Department of Management Studies</label >
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 form-group search-form">
+                        <select id="inputState1" class="form-control">
+                            <option selected>Year</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                        <button type="button" class="btn btn-primary">
+                            <i class="fas fa-search"></i> Search
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
 </jumbotron>

@@ -1,0 +1,23 @@
+<searchbar>
+    <section class="search-bar">
+        <div class="dark-overlay">
+            <input placeholder="Enter keywords">
+            <select class="search-type" name="search-options" id="search-options">
+                <option>Search By</option>
+                <option >Faculty</option>
+                <option>Year</option>
+                <option>Name</option>
+            </select>
+            <a href="http://localhost:4000/profiles/"><button class="btn btn-primary search-link">Search</button></a>
+        </div>
+    </section>
+    <div class="container search-result-display article-list">
+        {{#each papers as |paper|}}
+        <div class="paper-card">
+
+        </div>
+            <h1>{{paper.title}}</h1>
+            <h2>{{paper.year}}</h2>
+        {{/each}}
+    </div>
+</searchbar>
