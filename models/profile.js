@@ -29,6 +29,7 @@ const ProfileSchema = new mongoose.Schema({
         type: String,
     },
     expertise: [],
+    citationHistory: [],
     countCitations: {
         type: Number,
         required: true,

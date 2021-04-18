@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="../css/profile.css" type="text/css"/>
 
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <title>Document</title>
@@ -67,7 +68,7 @@
                                     {{/each}}
                                     </div>
                                     <div class="article-info">
-                                    {{article.journal}} {{article.conference}}
+                                    {{article.source}}
                                     </div>
                                     <hr>   
                                     <button type="button" class="btn btn-secondary btn-sm">View Abstract</button>
@@ -87,9 +88,18 @@
             </div>
 
             <div class="prof-stats col-lg-4">
-                <div class="citationsGraph">
+                <div class="publicationsGraph">
                     {{> publicationGraph}}
-                </div>               
+                </div> 
+                <div class="citationsGraph">
+                    {{> citationsGraph}}
+                </div>    
+                <div class="sourceGraph">
+                    {{> sourceGraph}}
+                </div> 
+                <div id="coauthors">
+                    <span>Top Co-Authors</span>
+                </div>            
             </div>
         </div>
     </section>

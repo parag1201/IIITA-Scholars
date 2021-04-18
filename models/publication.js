@@ -23,10 +23,10 @@ const PublicationSchema = new mongoose.Schema({
     },
     authors: [],
     keywords: [],
-    conference: {
+    type: {
         type: String,
     },
-    journal: {
+    source: {
         type: String,
     },
     year: {
