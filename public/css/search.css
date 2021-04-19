@@ -46,3 +46,44 @@ input{
         width: 450px;
     }
 }
+
+.paper-card {
+    border: 1px solid #eeeeee;
+    padding: 1em;
+    margin: 1em;
+}
+.authors {
+    display: flex;
+    justify-content: space-between;
+}
+
+.authors > p, .year > p {
+    margin: 0.3em;
+    color: grey;
+}
+.other-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tag {
+    text-decoration: none;
+    background: #E3F4FF;
+    color: rgb(3 102 214);;
+    margin-top: 0.4em;
+    margin-right: 1em;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid transparent;
+    border-radius: 2em;
+    padding: 0.2em 0.8em;
+    line-height: 22px;
+    transition: 300ms;
+}
+
+.tag:hover{
+    text-decoration: none;
+    cursor: pointer;
+    background: #CAF4FF;
+}
