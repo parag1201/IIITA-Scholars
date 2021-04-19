@@ -1,52 +1,92 @@
- <script type="text/javascript">
-    google.charts.load("current", {packages:["corechart"]});
-    google.charts.setOnLoadCallback(drawChart);
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
-    var papers = {{{json articles}}}
-    years = [];
+<script>
 
-    for (var i=0; i<papers.length; i++) {
-      years.push(papers[i].year);
+  var papers = {{{json articles}}}
+  years = [];
+
+  for (var i=0; i<papers.length; i++) {
+    years.push(papers[i].year);
+  }
+
+  years.sort();
+
+  var yAxisNames = [];
+  var xAxisNames = []
+
+  var cnt = 1;
+  for(var i=1; i<years.length; i++) {
+    if (years[i] == years[i-1]) {
+      cnt++;
+    } else {
+      yAxisNames.push(cnt);
+      xAxisNames.push(years[i-1].toString());
+      cnt = 1;
     }
+  }
 
-    years.sort();
+  yAxisNames.push(cnt);
+  xAxisNames.push(years[years.length-1].toString());
 
-    var table = [["Year", "Citations", { role: "style" }]];
-
-    var cnt = 1;
-    for(var i=1; i<years.length; i++) {
-      if (years[i] == years[i-1]) {
-        cnt++;
-      } else {
-        table.push([years[i-1].toString(), cnt, '#54a2f0']);
-        cnt = 1;
+  Highcharts.chart('container', {
+  chart: {
+    type: 'bar'
+  },
+  title: {
+    text: 'Publications per year'
+  },
+  subtitle: {
+    text: 'Source: Google Scholar'
+  },
+  xAxis: {
+    categories: xAxisNames,
+    title: {
+      text: null
+    }
+  },
+  yAxis: {
+    min: 0,
+    title: {
+      text: 'Articles',
+      align: 'high'
+    },
+    labels: {
+      overflow: 'justify'
+    }
+  },
+  tooltip: {
+    valueSuffix: ' articles'
+  },
+  plotOptions: {
+    bar: {
+      dataLabels: {
+        enabled: true
       }
     }
+  },
+  legend: {
+    layout: 'vertical',
+    align: 'right',
+    verticalAlign: 'top',
+    x: -40,
+    y: 80,
+    floating: true,
+    borderWidth: 1,
+    backgroundColor:
+      Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF',
+    shadow: true
+  },
+  credits: {
+    enabled: false
+  },
+  series: [{
+    name: "Articles",
+    data: yAxisNames,
+  }]
+});
+</script>
 
-    for(var i=0; i<8; i++) {
-      table.push([years[years.length-1].toString(), cnt, '#54a2f0']);
-    } 
 
-    function drawChart() {
-      var data = google.visualization.arrayToDataTable(table);
-
-      var view = new google.visualization.DataView(data);
-      view.setColumns([0, 1,
-                       { calc: "stringify",
-                         sourceColumn: 1,
-                         type: "string",
-                         role: "annotation" },
-                       2]);
-
-      var options = {
-        title: "Articles per year",
-        width: 400,
-        height: 400,
-        bar: {groupWidth: "20"},
-        legend: { position: "none" },
-      };
-      var chart = new google.visualization.BarChart(document.getElementById("publication_values"));
-      chart.draw(view, options);
-  }
-  </script>
-<div id="publication_values" style="width: 100%; height: 100%;"></div>

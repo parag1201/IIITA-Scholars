@@ -88,10 +88,21 @@
             </div>
 
             <div class="prof-stats col-lg-4">
+                <div class="insights">
+                    <i class="fas fa-lightbulb"></i> 
+                    <span>Insights</span>
+                    <hr>
+                </div>
                 <div class="publicationsGraph">
+                    <figure class="highcharts-figure">
+                        <div id="container"></div>
+                    </figure>
                     {{> publicationGraph}}
                 </div> 
                 <div class="citationsGraph">
+                    <figure class="highcharts-figure">
+                        <div id="container1"></div>
+                    </figure>
                     {{> citationsGraph}}
                 </div>    
                 <div class="sourceGraph">

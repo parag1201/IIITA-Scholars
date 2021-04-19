@@ -1,83 +1,75 @@
-{{!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawVisualization);
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
-      var papers = {{{json articles}}}
-      years = [];
+<script>
 
-      for (var i=0; i<papers.length; i++) {
-        years.push(papers[i].year);
-      }
+  var citations = {{{json profData.citationHistory}}}
 
-      years.sort();
+  var yAxisNames = [];
+  var xAxisNames = [];
 
-      var table = [["Year", "Articles"]];
-
-      var cnt = 1;
-      for(var i=1; i<years.length; i++) {
-        if (years[i] == years[i-1]) {
-          cnt++;
-        } else {
-          table.push([years[i-1].toString(), cnt]);
-          cnt = 1;
-        }
-      }
-
-      for(var i=0; i<6; i++) {
-        table.push([years[years.length-1].toString(), cnt]);
-      } 
-      function drawVisualization() {
-        // Some raw data (not necessarily accurate)
-        var data = google.visualization.arrayToDataTable(table);
-
-        var options = {
-          title : 'Articles per year',
-          vAxis: {title: 'Articles'},
-          hAxis: {title: 'Year'},
-          seriesType: 'bars',
-          lineWidth: 1,
-          series: {1: {type: 'line'}}
-        };
-
-        var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-      }
-    </script>
-<div id="chart_div" style="width: 100%; height: 500px;"></div> --}}
-
-
-  <script type="text/javascript">
-    google.charts.load("current", {packages:["corechart"]});
-    google.charts.setOnLoadCallback(drawChart);
-
-    var citations = {{{json profData.citationHistory}}}
-    var table1 = [["Year", "Citations", { role: "style" }]];
-
-    for(var i=0; i<citations.length; i++) {
-        table1.push([citations[i].split(" ")[0], parseInt(citations[i].split(" ")[1]), "#3bf767"]);
-    }
-
-    function drawChart() {
-      var data = google.visualization.arrayToDataTable(table1);
-
-      var view = new google.visualization.DataView(data);
-      view.setColumns([0, 1,
-                       { calc: "stringify",
-                         sourceColumn: 1,
-                         type: "string",
-                         role: "annotation" },
-                       2]);
-
-      var options = {
-        title: "Citations per year",
-        width: 400,
-        height: 400,
-        bar: {groupWidth: "20"},
-        legend: { position: "none" },
-      };
-      var chart = new google.visualization.BarChart(document.getElementById("citation_values"));
-      chart.draw(view, options);
+  for(var i=0; i<citations.length; i++) {
+      xAxisNames.push(citations[i].split(" ")[0]);
+      yAxisNames.push(parseInt(citations[i].split(" ")[1]))
   }
-  </script>
-<div id="citation_values" style="width: 100%; height: 100%;"></div>
+
+
+  Highcharts.chart('container1', {
+  chart: {
+    type: 'bar'
+  },
+  title: {
+    text: 'Citations per year'
+  },
+  subtitle: {
+    text: 'Source: Google Scholar'
+  },
+  xAxis: {
+    categories: xAxisNames,
+    title: {
+      text: null
+    }
+  },
+  yAxis: {
+    min: 0,
+    title: {
+      text: 'Citations',
+      align: 'high'
+    },
+    labels: {
+      overflow: 'justify'
+    }
+  },
+  tooltip: {
+    valueSuffix: ' citations'
+  },
+  plotOptions: {
+    bar: {
+      dataLabels: {
+        enabled: true
+      }
+    }
+  },
+  legend: {
+    layout: 'vertical',
+    align: 'right',
+    verticalAlign: 'top',
+    x: -40,
+    y: 80,
+    floating: true,
+    borderWidth: 1,
+    backgroundColor:
+      Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF',
+    shadow: true
+  },
+  credits: {
+    enabled: false
+  },
+  series: [{
+    name: "Citations",
+    data: yAxisNames,
+  }]
+});
+</script>
