@@ -1,0 +1,48 @@
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/sankey.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<script>
+    papers = {{{json articles}}}
+
+    coauthors = {}
+    owner = {{{json profData}}}.name
+
+    papers.forEach((paper) => {
+        paper.authors.forEach((author) => {
+            if(!coauthors[author]) coauthors[author]=0;
+            coauthors[author]++;
+        })
+    })
+
+  bestAuthors = []
+  for(var author in coauthors) {
+      bestAuthors.push([author, owner, coauthors[author]])
+  }
+
+  bestAuthors.sort(function(a, b) {
+      return b[2] - a[2]; 
+  })
+  bestAuthors = bestAuthors.slice(0, Math.min(10, bestAuthors.length));
+
+  Highcharts.chart('container3', {
+
+  title: {
+    text: 'Top Co-Authors'
+  },
+  accessibility: {
+    point: {
+      valueDescriptionFormat: '{index}. {point.from} to {point.to}, {point.weight}.'
+    }
+  },
+  series: [{
+    keys: ['from', 'to', 'weight'],
+    data: bestAuthors,
+    type: 'sankey',
+    name: 'Mutual Articles'
+  }]
+
+});
+</script>
