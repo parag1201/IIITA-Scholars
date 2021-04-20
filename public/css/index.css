@@ -1,177 +1,177 @@
 body {
-    margin: 0;
-    font-family: sans-serif;
+	margin: 0;
+	font-family: "Montserrat Alternates", sans-serif;
 }
 
 html {
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 /* Navbar */
 
 .navbar {
-    padding: 0% 10%;
+	padding: 0% 10%;
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: blue;
+	color: #000082;
 }
 
 @media screen and (max-width: 1200px) {
-    .navbar-brand > img {
-        width: 450px;
-    }
+	.navbar-brand > img {
+		width: 450px;
+	}
 
-    .gallery-cell img {
-        width: 150px;
-        height: 150px;
-    }
+	.gallery-cell img {
+		width: 150px;
+		height: 150px;
+	}
 }
 
 /* Search */
 
 .search-div {
-    background-image: url('../images/homepage.jpg');
-    background-size: 100%;
-    background-attachment: fixed no-repeat;
-    padding:0px 0px;
+	background-image: url("../images/homepage.jpg");
+	background-size: 100%;
+	background-attachment: fixed no-repeat;
+	padding: 0px 0px;
 }
 
 .dark-overlay {
-    padding: 5em 10em 5em 10em;
-    background-color: rgba(0, 0, 0, 0.5);
+	padding: 5em 10em 5em 10em;
+	background-color: rgba(0, 0, 0, 0.5);
 	width: 100%;
 	height: 100%;
-    position: relative;
+	position: relative;
 }
 
 .search-label {
-    font-size: 1.5rem;
-    color: white;
+	font-size: 1.5rem;
+	color: white;
 }
 
 .dept {
-    background-color: white;
-    margin: 0% 5px;
+	background-color: white;
+	margin: 0% 5px;
 }
 
 #inputState1 {
-    margin-bottom: 3px;
-    width: 250px;
+	margin-bottom: 3px;
+	width: 250px;
 }
 
 .search-form {
-    display: flex;
-    flex-direction: row;
-    padding-top: 2%;
+	display: flex;
+	flex-direction: row;
+	padding-top: 2%;
 }
 
 .search-form button {
-    width: 300px;
-    height: 38px;
-    margin: 1px 10px;
+	width: 300px;
+	height: 38px;
+	margin: 1px 10px;
 }
 
 /* Counter */
 
 #counter {
-    padding: 5% 10% 5%;
+	padding: 5% 10% 5%;
 }
 
 .count-box {
-    text-align: center;
-    position: relative;
-    background-color: rgb(246, 251, 254);
-    padding: 30px 2px;
-    box-shadow: 10px 5px 10px 5px #ececec;
+	text-align: center;
+	position: relative;
+	background-color: rgb(246, 251, 254);
+	padding: 30px 2px;
+	box-shadow: 10px 5px 10px 5px #ececec;
 }
 
 .count-box i {
-    position: absolute;
-    top: -8px;
-    left: 47%;
-    color: blue;
-    transform: scale(2, 2);
+	position: absolute;
+	top: -8px;
+	left: 47%;
+	color: blue;
+	transform: scale(2, 2);
 }
 
 .count-box span {
-    font-size: 2rem;
+	font-size: 2rem;
 }
 
 /* Professors */
 
 .carousel {
-    background: rgb(255, 255, 255);
-    padding: 2px 10%;
+	background: rgb(255, 255, 255);
+	padding: 2px 10%;
 }
 
 .swiper-container {
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
+	width: 100%;
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 
 .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 300px;
-    height: 400px;
-    box-shadow: 10px 10px 10px rgb(155, 151, 151);
-    filter: blur(2px);
-    border-color: black;
-    border-style: outset;
-    border-radius: 10px;
+	background-position: center;
+	background-size: cover;
+	width: 300px;
+	height: 400px;
+	box-shadow: 10px 10px 10px rgb(155, 151, 151);
+	filter: blur(2px);
+	border-color: black;
+	border-style: outset;
+	border-radius: 10px;
 }
 
 .swiper-slide-active {
-    filter: blur(0px);
+	filter: blur(0px);
 }
 
 .prof-card:hover {
-    transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 .prof-card {
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    transition: transform 0.2s;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	transition: transform 0.2s;
 }
 
 .prof-card span {
-    font-size: 1.2rem;
-    padding-top: 10px;
+	font-size: 1.2rem;
+	padding-top: 10px;
 }
 
 .prof-card p {
-    font-size: 0.9rem;
-    color: rgb(155, 151, 151);
+	font-size: 0.9rem;
+	color: rgb(155, 151, 151);
 }
 
 .card-content .btn {
-    margin-top: 20px;
+	margin-top: 20px;
 }
 
 .prof-card img {
-    margin-top: 30px;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-    object-fit: cover;
+	margin-top: 30px;
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+	object-fit: cover;
 }
 
 /* Footer */
 
 .footer-div {
-    background-color: rgb(48, 44, 44);
-    color: white;
-    font-size: 0.8rem;
-    text-align: center;
-    padding: 2% 10% 2% 10%;
+	background-color: rgb(48, 44, 44);
+	color: white;
+	font-size: 0.8rem;
+	text-align: center;
+	padding: 2% 10% 2% 10%;
 }
 
 p a,
 p a:hover,
 p a:active {
-    text-decoration: none;
-    color: inherit;
+	text-decoration: none;
+	color: inherit;
 }

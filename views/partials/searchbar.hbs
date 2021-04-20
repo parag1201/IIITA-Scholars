@@ -1,14 +1,16 @@
 <searchbar>
     <section class="search-bar">
         <div class="dark-overlay">
-            <input placeholder="Enter keywords">
-            <select class="search-type" name="search-options" id="search-options">
-                <option>Search By</option>
-                <option>Faculty</option>
-                <option>Year</option>
-                <option>Name</option>
-            </select>
-            <a href="http://localhost:4000/profiles"><button class="btn btn-primary search-link">Search</button></a>
+            <form action="/publications/search" method="get">
+                <input placeholder="Enter keywords" name="query">
+                <select class="search-type" name="search-options" id="search-options">
+                    <option selected disabled>Search By</option>
+                    <option>Faculty</option>
+                    <option>Year</option>
+                    <option>Name</option>
+                </select>
+                <a href="http://localhost:4000/profiles"><button class="btn btn-primary search-link" type="submit">Search</button></a>
+            </form>
         </div>
     </section>
     <div class="container search-result-display article-list">

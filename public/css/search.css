@@ -15,6 +15,7 @@
 
 input, .search-type {
     outline: none;
+    border-radius: 120px;
     border: none;
     padding: 0.5em 1em;
     background: white;
@@ -28,13 +29,14 @@ input{
 
 .search-type{
     width: 200px;
-    padding-top:0.6em;
+    padding-top:0.7em;
     padding-bottom:0.6em;
 }
 
 .search-link {
     padding: 0.5em 1em;
     width: 200px;
+    border-radius: 120px;
     margin: 0.5em;
 }
 
