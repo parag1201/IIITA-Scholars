@@ -1,4 +1,4 @@
-    <script type="text/javascript">
+    {{!-- <script type="text/javascript">
       google.charts.load("current", {packages:["corechart"]});
       google.charts.setOnLoadCallback(drawChart);
 
@@ -39,5 +39,61 @@
         chart.draw(data, options);
       }
     </script>
-  <div id="donutchart" style="width: 100%; height: 100%;"></div>
+  <div id="donutchart" style="width: 100%; height: 100%;"></div> --}}
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-3d.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<script>
+
+  var arts = {{{json articles}}}
+  var types = []
+
+  for(var i=0; i<arts.length; i++) {
+    types.push(arts[i].type)
+  }
+
+  types.sort();
+  content = [];
+  var cnt = 1;
+
+  for(var i=1; i<types.length; i++) {
+    if (types[i] == types[i-1]) {
+      cnt ++;
+    } else {
+      content.push([types[i-1], cnt]);
+      cnt = 1;
+    }
+  }
+  content.push([types[types.length-1], cnt]);
+
+  Highcharts.chart('container2', {
+  chart: {
+    type: 'pie',
+    options3d: {
+      enabled: true,
+      alpha: 45
+    }
+  },
+  title: {
+    text: 'Type of publication'
+  },
+  subtitle: {
+    text: 'Source: Google Scholar'
+  },
+  plotOptions: {
+    pie: {
+      innerSize: 100,
+      depth: 45
+    }
+  },
+  series: [{
+    name: 'Count',
+    data: content,
+  }]
+});
+</script>
   
