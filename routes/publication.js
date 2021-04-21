@@ -12,7 +12,7 @@ router.get("/", async (req, res) => {
 		if (result.length === 0) {
 			return res.status(400).json({ msg: "No papers found" });
 		}
-		console.log(result);
+		// console.log(result);
 		res.render("../views/search.hbs", { papers: result });
 	} catch (error) {
 		console.error(error.mesage);
@@ -44,7 +44,7 @@ router.get("/search", async (req, res) => {
 		// }
 		// if (title) {
 		// }
-		console.log(result);
+		// console.log(result);
 		res.render("../views/search.hbs", { papers: result });
 	} catch (error) {
 		console.error(error.message);

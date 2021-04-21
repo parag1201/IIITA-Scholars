@@ -47,3 +47,10 @@ app.get('/', function (req, res) {
 
 app.use('/profiles', require('./routes/profile'))
 app.use('/publications', require('./routes/publication'))
+
+/*
+
+var x = {{{json articles}}}
+        console.log(x[0])
+        
+*/ 

@@ -11,9 +11,11 @@
                         <label class="search-label">Select Faculty</label>
                         <select id="inputState" class="form-control">
                             <option selected>All</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
+                            {{#each profData as |prof|}}
+                                <option>{{prof.name}}</option>
+                            {{/each}}
+                            {{!-- <option>2</option>
+                            <option>3</option> --}}
                         </select>
                     </div>
                 </div>
