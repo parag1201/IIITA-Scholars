@@ -30,12 +30,15 @@ router.get('/:id', (req, res) => {
             Publication.find()
                 .lean()
                 .then((papers) => {
+                    profPapers = []
                     papers.forEach((paper) => {
-                        paper.authors = paper.authors.slice(1)
+                        if (paper.mainAuthor == result.name) {
+                            profPapers.push(paper)
+                        }
                     })
                     res.render('../views/profile', {
                         profData: result,
-                        articles: papers,
+                        articles: profPapers,
                     })
                 })
                 .catch((err) => {
