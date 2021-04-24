@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html {
@@ -101,7 +101,7 @@ html {
 
 .carousel {
     background: rgb(255, 255, 255);
-    padding: 2px 10%;
+    padding: 0 6%;
 }
 
 .swiper-container {
@@ -115,11 +115,12 @@ html {
     background-size: cover;
     width: 300px;
     height: 400px;
-    box-shadow: 10px 10px 10px rgb(155, 151, 151);
-    filter: blur(2px);
-    border-color: black;
+    box-shadow: 10px 10px 10px rgb(230, 230, 230);
+    filter: blur(0.5px);
+    border:  0.5px solid grey;
     border-style: outset;
-    border-radius: 10px;
+    border-radius: 5px;
+    filter: blur(3px);
 }
 
 .swiper-slide-active {
@@ -134,7 +135,7 @@ html {
     text-align: center;
     padding-top: 20px;
     padding-bottom: 10px;
-    transition: transform 0.2s;
+    transition: transform 0.4s;
 }
 
 .prof-card span {
@@ -169,8 +170,13 @@ html {
     padding: 2% 10% 2% 10%;
 }
 
+
+p a:hover{
+    color:#aeaeae;
+    text-decoration: none;
+}
+
 p a,
-p a:hover,
 p a:active {
     text-decoration: none;
     color: inherit;

@@ -1,5 +1,7 @@
 /* Navbar */
-
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .navbar {
     padding: 0% 10%;
 }

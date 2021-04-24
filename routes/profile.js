@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
     Profile.find()
         .lean()
         .then((result) => {
-            console.log(result)
+            // console.log(result)
             res.render('../views/facultiesPage', { profData: result })
         })
         .catch((err) => {
