@@ -21,6 +21,9 @@ const PublicationSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    mainAuthor: {
+        type: String,
+    },
     authors: [],
     keywords: [],
     type: {
