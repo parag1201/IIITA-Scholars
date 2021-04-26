@@ -48,7 +48,18 @@ router.get("/", async (req, res) => {
 		if (result.length === 0) {
 			return res.status(400).json({ msg: "No papers found" });
 		}
-		res.render("../views/search.hbs", { papers: result });
+
+		result.forEach(paper => {
+			var list = [];
+			for (let index = 0; index < Math.min(4, paper.authors.length); index++) {
+				const author = paper.authors[index];
+				list.push(author);
+			}
+			paper.authors = list;
+			console.log(paper.authors.length);
+		});
+
+		res.render("../views/search.hbs", { papers: result});
 	} catch (error) {
 		console.error(error.mesage);
 		res.status(500).json({ msg: "Server Error" });
