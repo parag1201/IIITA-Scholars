@@ -13,15 +13,26 @@
                         <div class="prof-data-ids">
                             {{#if prof.scholar_id}}
                                 <div class="prof-id"><i class="fab fa-google"></i><a href="https://scholar.google.co.in/citations?user={{prof.scholar_id}}" target="_blank"> Google Scholar</a></div>
-                            {{/if}}                        
+                            {{else}}
+                                <div class="prof-id"><i class="fab fa-google"></i><a href="#" target="_blank"> Google Scholar</a></div>
+                            {{/if}}
+
                             {{#if prof.orcid_id}}
                                 <div class="prof-id"><i class="fab fa-orcid"></i><a href="https://orcid.org/{{prof.orcid_id}}" target="_blank"> Orcid</a></div>
+                            {{else}}
+                                <div class="prof-id"><i class="fab fa-orcid"></i><a href="#" target="_blank"> Orcid</a></div>
                             {{/if}}  
+
                             {{#if prof.microsoft_id}}
                                 <div class="prof-id"><i class="fab fa-microsoft"></i><a href="https://academic.microsoft.com/author/{{prof.microsoft_id}}" target="_blank"> Microsoft Academic</a></div>
+                            {{else}}
+                                <div class="prof-id"><i class="fab fa-microsoft"></i><a href="#" target="_blank"> Microsoft Academic</a></div>
                             {{/if}}  
+                            
                             {{#if prof.scopus_id}}
                                 <div class="prof-id"><i class="fab fa-stripe-s"></i><a href="https://www.scopus.com/authid/detail.uri?authorId={{prof.scopus_id}}" target="_blank"> Scopus</a></div>
+                            {{else}}
+                                <div class="prof-id"><i class="fab fa-stripe-s"></i><a href="#" target="_blank"> Scopus</a></div>
                             {{/if}}
                         </div>
                         <div class="count">
