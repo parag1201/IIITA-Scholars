@@ -1,0 +1,249 @@
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-3d.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+{{!-- Yearwise articles --}}
+
+<script>
+  var papers = {{{json articles}}}
+  papers = papers.slice(papers.length - 20, papers.length)
+  var yAxisNames = [];
+  var xAxisNames = [];
+
+  papers.forEach((paper) => {
+      xAxisNames.push(paper[0]);
+      yAxisNames.push(paper[1]);
+  })
+
+  Highcharts.chart('yearwiseArticles', {
+  chart: {
+    type: 'bar'
+  },
+  title: {
+    text: 'Publications per year'
+  },
+  subtitle: {
+    text: 'Source: Google Scholar'
+  },
+  xAxis: {
+    categories: xAxisNames,
+    title: {
+      text: null
+    }
+  },
+  yAxis: {
+    min: 0,
+    title: {
+      text: 'Publications',
+      align: 'high'
+    },
+    labels: {
+      overflow: 'justify'
+    }
+  },
+  tooltip: {
+    valueSuffix: ' publications'
+  },
+  plotOptions: {
+    bar: {
+      dataLabels: {
+        enabled: true
+      }
+    }
+  },
+  legend: {
+    layout: 'vertical',
+    align: 'right',
+    verticalAlign: 'top',
+    x: -40,
+    y: 80,
+    floating: true,
+    borderWidth: 1,
+    backgroundColor:
+      Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF',
+    shadow: true
+  },
+  credits: {
+    enabled: false
+  },
+  series: [{
+    name: "Publications",
+    data: yAxisNames,
+  }]
+});
+</script>
+
+{{!-- Yearwise citations --}}
+
+<script>
+  var cites = {{{json citations}}}
+  cites = cites.slice(cites.length - 20, cites.length)
+  var yAxisNames = [];
+  var xAxisNames = [];
+
+  cites.forEach((paper) => {
+      xAxisNames.push(paper[0]);
+      yAxisNames.push(paper[1]);
+  })
+
+  Highcharts.chart('yearwiseCitations', {
+  chart: {
+    type: 'bar'
+  },
+  title: {
+    text: 'Citations per year'
+  },
+  subtitle: {
+    text: 'Source: Google Scholar'
+  },
+  xAxis: {
+    categories: xAxisNames,
+    title: {
+      text: null
+    }
+  },
+  yAxis: {
+    min: 0,
+    title: {
+      text: 'Citations',
+      align: 'high'
+    },
+    labels: {
+      overflow: 'justify'
+    }
+  },
+  tooltip: {
+    valueSuffix: ' citations'
+  },
+  plotOptions: {
+    bar: {
+      dataLabels: {
+        enabled: true
+      }
+    }
+  },
+  legend: {
+    layout: 'vertical',
+    align: 'right',
+    verticalAlign: 'top',
+    x: -40,
+    y: 80,
+    floating: true,
+    borderWidth: 1,
+    backgroundColor:
+      Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF',
+    shadow: true
+  },
+  credits: {
+    enabled: false
+  },
+  series: [{
+    name: "Citations",
+    data: yAxisNames,
+  }]
+});
+</script>
+
+<script>
+    depts = {{{json departments}}}
+    var publications = []
+    var citations = []
+    var data = {{{json deptData}}}
+
+    data.forEach((res) => {
+        publications.push(res[0])
+        citations.push(res[1])
+    })
+    Highcharts.chart('deptGraph', {
+  chart: {
+    type: 'bar'
+  },
+  title: {
+    text: 'Departments'
+  },
+  subtitle: {
+    text: 'Source: Google Scholar'
+  },
+  xAxis: {
+    categories: depts,
+    title: {
+      text: null
+    }
+  },
+  yAxis: {
+    min: 0,
+    title: {
+      text: 'Count',
+      align: 'high'
+    },
+    labels: {
+      overflow: 'justify'
+    }
+  },
+  tooltip: {
+    valueSuffix: ' '
+  },
+  plotOptions: {
+    bar: {
+      dataLabels: {
+        enabled: true
+      }
+    }
+  },
+  legend: {
+    layout: 'vertical',
+    align: 'right',
+    verticalAlign: 'middle',
+    x: -40,
+    y: 80,
+    floating: true,
+    borderWidth: 1,
+    backgroundColor:
+      Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF',
+    shadow: true
+  },
+  credits: {
+    enabled: false
+  },
+  series: [{
+    name: 'Publications',
+    data: publications
+  }, {
+    name: 'Citations',
+    data: citations
+  }]
+});
+</script>
+
+<script>
+
+  content = {{{json types}}}
+  
+  Highcharts.chart('typeGraph', {
+  chart: {
+    type: 'pie',
+    options3d: {
+      enabled: true,
+      alpha: 45
+    }
+  },
+  title: {
+    text: 'Type of publication'
+  },
+  subtitle: {
+    text: 'Source: Google Scholar'
+  },
+  plotOptions: {
+    pie: {
+      innerSize: 100,
+      depth: 45
+    }
+  },
+  series: [{
+    name: 'Count',
+    data: content,
+  }]
+});
+</script>

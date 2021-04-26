@@ -117,7 +117,7 @@ html {
     height: 400px;
     box-shadow: 10px 10px 10px rgb(230, 230, 230);
     filter: blur(0.5px);
-    border:  0.5px solid grey;
+    border: 0.5px solid grey;
     border-style: outset;
     border-radius: 5px;
     filter: blur(3px);
@@ -160,6 +160,12 @@ html {
     object-fit: cover;
 }
 
+/* Graphs */
+
+.graphs {
+    padding: 0 6%;
+}
+
 /* Footer */
 
 .footer-div {
@@ -170,9 +176,8 @@ html {
     padding: 2% 10% 2% 10%;
 }
 
-
-p a:hover{
-    color:#aeaeae;
+p a:hover {
+    color: #aeaeae;
     text-decoration: none;
 }
 

@@ -20,6 +20,7 @@
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
         <link rel="stylesheet" href="./css/index.css" type="text/css"/>
+        <link rel="stylesheet" href="./css/charts.css" type="text/css"/>
         <title>IIITA Scholars</title>
     </head>
     <body>
@@ -27,10 +28,39 @@
         {{> jumbotron}}
         {{> counter}}
         {{> carousel}}
+
+        <div class="graphs">
         <div class="row">
-            <div class="col">{{> graph}}</div>
-            <div class="col">{{> about}}</div>
+            <div class="col-md-6" data-aos="zoom-in">
+                <figure class="highcharts-figure">
+                    <div id="yearwiseArticles"></div>
+                </figure>
+                
+            </div>
+
+            <div class="col-md-6" data-aos="zoom-in">
+                <figure class="highcharts-figure">
+                    <div id="yearwiseCitations"></div>
+                </figure>
+                
+            </div>
         </div>
+
+        <div class="row">
+            <div class="col-md-6" data-aos="zoom-in">
+                <figure class="highcharts-figure">
+                    <div id="deptGraph"></div>
+                </figure>
+            </div>
+            <div class="col-md-6" data-aos="zoom-in">
+                <figure class="highcharts-figure">
+                    <div id="typeGraph"></div>
+                </figure>
+            </div>
+        </div>
+        </div>
+
+        {{> homeGraphs}}
         
         
         {{> footer}}
@@ -64,15 +94,3 @@
         <script src="./scripts/index.js"></script>
     </body>
 </html>
-
-
-{{!-- <!DOCTYPE html>
-<html>
-<head>
-	<title>Handlebars Demo</title>
-</head>
-<body>
-	<h4>HELLO</h4>
-	<h4>HOW ARE YOU</h4>
-</body>
-</html> --}}

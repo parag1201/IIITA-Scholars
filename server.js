@@ -41,13 +41,10 @@ app.use((req, res, next) => {
 })
 //connectDB();
 
-app.get('/', function (req, res) {
-    res.render('home.hbs', { profData })
-})
-
 app.use('/profiles', require('./routes/profile'))
 app.use('/publications', require('./routes/publication'))
 app.use('/', require('./routes/abstract'))
+app.use('/', require('./routes/index'))
 
 /*
 

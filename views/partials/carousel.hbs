@@ -8,13 +8,13 @@
                             <img src={{prof.avatar_url}} alt="">
                             <br />
                             <span>{{prof.name}}</span>
-                            <p>Department of {{prof.department}}</p>
+                            <p>{{prof.department}}</p>
                             <div class="card-content">
-                                <i class="far fa-newspaper"></i> {{prof.publications}} Publications
+                                <i class="far fa-newspaper"></i> {{prof.countPublications}} Publications
                                 <br />
-                                <i class="fas fa-link"></i> {{prof.citations}} Citations
+                                <i class="fas fa-link"></i> {{prof.countCitations}} Citations
                                 <br />
-                                <button type="button" class="btn btn-outline-info">View Profile</button>
+                                <a href='/profiles/{{prof._id}}'><button type="button" class="btn btn-outline-info" >View Profile</button></a>
                             </div>
                         </div>
                     </div>
