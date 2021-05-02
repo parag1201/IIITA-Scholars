@@ -85,6 +85,17 @@ body {
     font-size: 1.5rem;
     background-color: rgb(250, 247, 243);
     padding-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filters,
+.articles-title {
+    display: inline-block;
+}
+
+.filters {
+    font-size: 1rem;
 }
 
 .article {

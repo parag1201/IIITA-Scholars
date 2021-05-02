@@ -39,4 +39,28 @@ $(function () {
             $('div.modal').removeClass('display')
         }
     })
+
+    $('.form-check-input').on('click', (event) => {
+        var sortBy = '.' + $(event.currentTarget).attr('value')
+        var order = parseInt($(event.currentTarget).data('sort'))
+
+        var divs = $('div.article-list')
+            .children('.article')
+            .toArray()
+            .sort(function (a, b) {
+                var val1 = parseInt(
+                    $(sortBy, a)
+                        .text()
+                        .replace(/^\W+|\W+$/g, '')
+                )
+                var val2 = parseInt(
+                    $(sortBy, b)
+                        .text()
+                        .replace(/^\W+|\W+$/g, '')
+                )
+                return val1 > val2 ? order : val1 < val2 ? -1 * order : 0
+            })
+
+        $('div.article-list').append(divs)
+    })
 })

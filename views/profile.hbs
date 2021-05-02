@@ -54,7 +54,37 @@
                 </div>
                 <div class="prof-articles">
                     <div class="article-header">
-                        <span>Articles</span>
+                        <div class="articles-title ">
+                            <span>Publications</span>       
+                        </div>             
+
+                        <div class="filters">
+                            Sort by: 
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" data-sort="-1" name="exampleRadios" id="exampleRadios1" value="count-citations" checked>
+                                <label class="form-check-label" for="exampleRadios1">
+                                    Citations (Dec.)
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" data-sort="1" name="exampleRadios" id="exampleRadios2" value="count-citations">
+                                <label class="form-check-label" for="exampleRadios2">
+                                    Citations (Inc.)
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" data-sort="-1" name="exampleRadios" id="exampleRadios3" value="count-year">
+                                <label class="form-check-label" for="exampleRadios3">
+                                    Year (Dec.)
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" data-sort="1" name="exampleRadios" id="exampleRadios4" value="count-year">
+                                <label class="form-check-label" for="exampleRadios4">
+                                    Year (Inc.)
+                                </label>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="article-list">
@@ -77,9 +107,15 @@
                                 </div>
                                 <div class="article-citations">
                                     <i class="fas fa-link"></i>
-                                    <span class="count"> {{article.citations}}</span> <br>
+                                    <span class="count count-citations"> 
+                                        {{#if article.citations}}
+                                            {{article.citations}}
+                                        {{else}}
+                                            0
+                                        {{/if}}
+                                    </span> <br>
                                     <i class="far fa-calendar-alt"></i>
-                                    <span class="count"> {{article.year}}</span>
+                                    <span class="count count-year"> {{article.year}}</span>
                                 </div>
                             </div>                            
                         </div>
