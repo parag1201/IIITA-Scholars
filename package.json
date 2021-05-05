@@ -24,6 +24,7 @@
     "express": "^4.17.1",
     "express-handlebars": "^5.2.1",
     "handlebars": "^4.7.7",
+    "handlebars-paginate": "^0.1.0",
     "hbs": "^4.1.2",
     "mongoose": "^5.12.3",
     "path": "^0.12.7"

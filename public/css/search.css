@@ -89,3 +89,48 @@ input{
     cursor: pointer;
     background: #CAF4FF;
 }
+
+.pagination-buttons{
+    margin: 2em auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.pag-link {
+    text-align: center;
+    color: #08c;
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 0.8em;
+    background-color:rgb(243, 243, 243);
+    margin: 0.5em;
+    /* -webkit-box-shadow: 0 5px 15px 0 rgb(0 0 0 / 8%); */
+    box-shadow: 0 5px 15px 0 rgb(0 0 0 / 8%);
+    transition: 0.3s;
+}
+
+
+.pag-link:hover{
+    text-decoration: none;
+    background-color: rgb(220,220,220);
+    cursor: pointer;
+}
+
+.current-page, .current-page:hover{
+    background-color: #08c;
+    color: white;
+}
+.current-page:hover{
+    cursor: unset;
+}
+
+.grp{
+    display: inline-block;
+}
+
+label {
+    color: white
+}

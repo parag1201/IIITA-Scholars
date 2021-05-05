@@ -4,7 +4,6 @@ const exphbs = require('express-handlebars')
 //const connectDB = require('./config/db');
 const mongoose = require('mongoose')
 const profData = require('./config/data.json')
-
 const port = process.env.PORT || 4000
 var app = express()
 
@@ -32,7 +31,6 @@ app.engine(
     })
 )
 app.set('view engine', '.hbs')
-
 app.use(express.static(__dirname + '/public'))
 app.use(express.urlencoded({ extended: true }))
 app.use((req, res, next) => {

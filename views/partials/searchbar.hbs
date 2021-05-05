@@ -2,14 +2,32 @@
     <section class="search-bar">
         <div class="dark-overlay">
             <form action="/publications/search" method="get">
-                <input placeholder="Enter keywords" name="query">
-                <select class="search-type" name="search-options" id="search-options">
-                    <option selected disabled>Search By</option>
-                    <option>Faculty</option>
-                    <option>Year</option>
-                    <option>Name</option>
-                </select>
-                <a href="http://localhost:4000/profiles"><button class="btn btn-primary search-link" type="submit">Search</button></a>
+                <div class="grp">
+                    <label >Search here</label>
+                    <input placeholder="Enter keywords" name="query" />
+                </div>
+                <div class="grp">
+                    <label>Faculty</label>
+                    <select class="search-type" name="faculty" id="search-options">
+                        <option selected disabled>All</option>
+                        {{#each faculties as |f|}}
+                        <option value={{{f.name}}}>{{f.name}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <div class="grp">
+                    <label>Year</label>
+                    <select class="search-type" name="year" id="search-options">
+                        <option selected disabled>All</option>
+                    </select>
+                </div>
+                <div class="grp">
+                    <label>Department</label>
+                    <select class="search-type" name="department" id="search-options">
+                        <option selected disabled>All</option>
+                    </select>
+                </div>
+                <a href="http://localhost:4000/publications"><button class="btn btn-primary search-link" type="submit">Search</button></a>
             </form>
         </div>
     </section>
@@ -38,4 +56,15 @@
         </div>
         {{/each}}
     </div>
+
+    <span id="pagination-wrapper" class="pagination-buttons">
+        <a class="pag-link left-button"><i class="fas fa-chevron-left"></i></a>
+        <a class="pag-link">1</a>
+        <a class="pag-link">2</a>
+        <a class="pag-link">3</a>
+        <a class="pag-link">4</a>
+        <a class="pag-link">5</a>
+        <a class="pag-link">6</a>
+        <a class="pag-link right-button"><i class="fas fa-chevron-right"></i></a>
+    </span>
 </searchbar>
