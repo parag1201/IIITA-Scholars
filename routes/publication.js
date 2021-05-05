@@ -10,6 +10,7 @@ const Profile = require("../models/profile");
 router.get("/search", async (req, res) => {
 	try {
 		const facult = await Profile.find().lean();
+		
 		// Search for Authors
 		if (req.query.faculty) {
 			const regex = new RegExp(req.query.faculty, "i");
@@ -19,8 +20,8 @@ router.get("/search", async (req, res) => {
 			}).lean();
 		}
 		// Search by title
-		else if (req.query.name) {
-			const regex = new RegExp(req.query.name, "i");
+		else if (req.query.query) {
+			const regex = new RegExp(req.query.query, "i");
 
 			Publication.find({ title: regex }, (err, docs) => {
 				res.render("../views/search.hbs", {
@@ -61,9 +62,8 @@ router.get("/page/:page_number", async (req, res) => {
 		}
 		const facult = await Profile.find().lean();
 
-		const d = Publication.find().sort({year:-1}).limit(1);
-
-        console.log(d);
+		// const d = Publication.find().sort({year:-1}).limit(1);
+        // console.log(d);
 
 		result.forEach((paper) => {
 			var list = [];
@@ -94,3 +94,7 @@ function escapeRegex(text) {
 }
 
 module.exports = router;
+
+
+// 1. Name titles
+// 

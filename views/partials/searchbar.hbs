@@ -1,7 +1,7 @@
 <searchbar>
     <section class="search-bar">
         <div class="dark-overlay">
-            <form action="/publications/search" method="get">
+            <form action="/publications/search" method="GET">
                 <div class="grp">
                     <label >Search here</label>
                     <input placeholder="Enter keywords" name="query" />
@@ -11,7 +11,7 @@
                     <select class="search-type" name="faculty" id="search-options">
                         <option selected disabled>All</option>
                         {{#each faculties as |f|}}
-                        <option value={{{f.name}}}>{{f.name}}</option>
+                        <option value="{{f.name}}">{{f.name}}</option>
                         {{/each}}
                     </select>
                 </div>
@@ -27,6 +27,7 @@
                         <option selected disabled>All</option>
                     </select>
                 </div>
+                {{!-- <input type="submit" value="Submit"> --}}
                 <a href="http://localhost:4000/publications"><button class="btn btn-primary search-link" type="submit">Search</button></a>
             </form>
         </div>
