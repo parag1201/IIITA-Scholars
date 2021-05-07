@@ -14,21 +14,26 @@ router.get("/search", async (req, res) => {
 		// Search for Authors
 		if (req.query.faculty) {
 			const regex = new RegExp(req.query.faculty, "i");
-
 			Publication.find({ authors: { $in: regex } }, (err, docs) => {
 				res.render("../views/search.hbs", { papers: docs });
 			}).lean();
 		}
-		// Search by title
+		// Search by title and tag
 		else if (req.query.query) {
 			const regex = new RegExp(req.query.query, "i");
-
-			Publication.find({ title: regex }, (err, docs) => {
+			Publication.find(
+				{ 
+					$or: [
+						{title: regex},
+						{ keywords: { $in: regex } }
+					]
+				}, (err, docs) => {
 				res.render("../views/search.hbs", {
 					papers: docs,
 					faculties: facult,
 				});
 			}).lean();
+			
 		} else if (req.query.year) {
 			Publication.find({ year: "2018" }, (err, docs) => {
 				res.render("../views/search.hbs", {
@@ -89,12 +94,5 @@ router.get("/page/:page_number", async (req, res) => {
 	}
 });
 
-function escapeRegex(text) {
-	return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
-}
 
 module.exports = router;
-
-
-// 1. Name titles
-// 
