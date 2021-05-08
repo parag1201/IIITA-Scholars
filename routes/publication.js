@@ -11,8 +11,24 @@ router.get("/search", async (req, res) => {
 	try {
 		const facult = await Profile.find().lean();
 		
+		if(req.query.department) {
+			Profile.find({department: "Department of Information Technology "}, {"name":1,"_id":0}, (err, docs) => {
+				const faculty = []
+				for (index in docs) {
+					faculty.push({
+						"mainAuthor": docs[index].name
+					})
+				}
+				// console.log(faculty)
+ 				Publication.find({
+					"$or": faculty
+				}, (err, papers) => {
+					res.render("../views/search.hbs", { papers: papers });
+				}).lean()
+			}).lean()
+		}
 		// Search for Authors
-		if (req.query.faculty) {
+		else if (req.query.faculty) {
 			Publication.find({ mainAuthor: req.query.faculty }, (err, docs) => {
 				res.render("../views/search.hbs", { papers: docs });
 			}).lean();
@@ -34,7 +50,8 @@ router.get("/search", async (req, res) => {
 			}).lean();
 			
 		} else if (req.query.year) {
-			Publication.find({ year: "2018" }, (err, docs) => {
+			console.log(typeof(req.query.year))
+			Publication.find({ year: req.query.year }, (err, docs) => {
 				res.render("../views/search.hbs", {
 					papers: docs,
 					faculties: facult,
@@ -95,3 +112,6 @@ router.get("/page/:page_number", async (req, res) => {
 
 
 module.exports = router;
+
+// deaprtment
+// Prof
