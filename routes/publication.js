@@ -13,8 +13,7 @@ router.get("/search", async (req, res) => {
 		
 		// Search for Authors
 		if (req.query.faculty) {
-			const regex = new RegExp(req.query.faculty, "i");
-			Publication.find({ authors: { $in: regex } }, (err, docs) => {
+			Publication.find({ mainAuthor: req.query.faculty }, (err, docs) => {
 				res.render("../views/search.hbs", { papers: docs });
 			}).lean();
 		}
