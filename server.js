@@ -6,6 +6,7 @@ const mongoose = require('mongoose')
 const profData = require('./config/data.json')
 const port = process.env.PORT || 4000
 var app = express()
+var hbs = exphbs.create({});
 
 const dbURI =
     'mongodb+srv://parag:ry0TSDl0qIdbBaKl@cluster0.zzsw3.mongodb.net/scholars?retryWrites=true&w=majority'
@@ -31,6 +32,14 @@ app.engine(
     })
 )
 app.set('view engine', '.hbs')
+
+hbs.handlebars.registerHelper('for', function(from, to, incr, block) {
+    var accum = '';
+    for(var i = from; i < to; i += incr)
+        accum += `<option value=${i}>${i}</option>`;
+    return accum;
+});
+
 app.use(express.static(__dirname + '/public'))
 app.use(express.urlencoded({ extended: true }))
 app.use((req, res, next) => {

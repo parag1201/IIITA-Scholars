@@ -19,12 +19,19 @@
                     <label>Year</label>
                     <select class="search-type" name="year" id="search-options">
                         <option selected disabled>All</option>
+                        {{#for 1973 2022 1}}
+                            {{this}}
+                        {{/for}}
                     </select>
                 </div>
                 <div class="grp">
                     <label>Department</label>
                     <select class="search-type" name="department" id="search-options">
                         <option selected disabled>All</option>
+                        <option value="Department of Information Technology ">Information Technology</option>
+                        <option value="Department of Electronics and Communication Engineering ">Electronics and Communication Engineering</option>
+                        <option value="Department of Management Studies ">Management Studies</option>
+                        <option value="Department of Applied Sciences ">Applied Sciences</option>
                     </select>
                 </div>
                 {{!-- <input type="submit" value="Submit"> --}}

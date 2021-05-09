@@ -12,7 +12,7 @@ router.get("/search", async (req, res) => {
 		const facult = await Profile.find().lean();
 		
 		if(req.query.department) {
-			Profile.find({department: "Department of Information Technology "}, {"name":1,"_id":0}, (err, docs) => {
+			Profile.find({department: req.query.department}, {"name":1,"_id":0}, (err, docs) => {
 				const faculty = []
 				for (index in docs) {
 					faculty.push({
@@ -50,7 +50,7 @@ router.get("/search", async (req, res) => {
 			}).lean();
 			
 		} else if (req.query.year) {
-			console.log(typeof(req.query.year))
+			// console.log(typeof(req.query.year))
 			Publication.find({ year: req.query.year }, (err, docs) => {
 				res.render("../views/search.hbs", {
 					papers: docs,
