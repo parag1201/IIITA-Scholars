@@ -58,9 +58,37 @@ router.get("/search", async (req, res) => {
 				});
 			}).lean();
 		} else {
+			// Return all papers in paginated format
+			const page = parseInt(req.query.page)
+			const limit = parseInt(req.query.limit)
+		
+			const startIndex = (page - 1) * limit
+			const endIndex = page * limit
+		
+			const results = {}
+		
+			if (endIndex < await Publication.countDocuments().exec()) {
+				results.next = {
+					page: page + 1,
+					limit: limit
+				}
+			}
+			
+			if (startIndex > 0) {
+				results.previous = {
+					page: page - 1,
+					limit: limit
+				}
+			}
+			try {
+				results.results = await Publication.find().lean().limit(limit).skip(startIndex).exec()
+			} catch (e) {
+				res.status(500).json({ message: e.message })
+			}
+
 			Publication.find((err, docs) => {
 				res.render("../views/search.hbs", {
-					papers: docs,
+					papers: results.results,
 					faculties: facult,
 				});
 			}).lean();
@@ -71,47 +99,52 @@ router.get("/search", async (req, res) => {
 	}
 });
 
-router.get("/page/:page_number", async (req, res) => {
-	try {
-		var page = req.params.page_number;
-		const result = await Publication.find()
-			.skip((page - 1) * 30)
-			.limit(30)
-			.lean();
-		if (result.length === 0) {
-			return res.status(400).json({ msg: "No papers found" });
-		}
-		const facult = await Profile.find().lean();
+// router.get("/seearch", paginatedResults(Publication), async (req, res) => {
+// 	try {
+// 		res.json(res.paginatedResults)
+// 	} catch (error) {
+// 		console.error(error.mesage);
+// 		res.status(500).json({ msg: "Server Error" });
+// 	}
+// })
 
-		// const d = Publication.find().sort({year:-1}).limit(1);
-        // console.log(d);
-
-		result.forEach((paper) => {
-			var list = [];
-			for (
-				let index = 0;
-				index < Math.min(4, paper.authors.length);
-				index++
-			) {
-				const author = paper.authors[index];
-				list.push(author);
-			}
-			paper.authors = list;
-		});
-
-		res.render("../views/search.hbs", {
-			papers: result,
-			highLight: page,
-			faculties: facult,
-		});
-	} catch (error) {
-		console.error(error.mesage);
-		res.status(500).json({ msg: "Server Error" });
-	}
-});
+// Middleware
+// will need for pagination
+// function paginatedResults(model){
+// 	return async (req, res, next) => {
+// 		const page = parseInt(req.query.page)
+// 		const limit = parseInt(req.query.limit)
+	
+// 		const startIndex = (page - 1) * limit
+// 		const endIndex = page * limit
+	
+// 		const results = {}
+	
+// 		if (endIndex < await model.countDocuments().exec()) {
+// 		  results.next = {
+// 			page: page + 1,
+// 			limit: limit
+// 		  }
+// 		}
+		
+// 		if (startIndex > 0) {
+// 		  results.previous = {
+// 			page: page - 1,
+// 			limit: limit
+// 		  }
+// 		}
+// 		try {
+// 		  results.results = await model.find().limit(limit).skip(startIndex).exec()
+// 		  res.paginatedResults = results
+// 		  next()
+// 		} catch (e) {
+// 		  res.status(500).json({ message: e.message })
+// 		}
+// 	}
+// }
 
 
 module.exports = router;
 
-// deaprtment
-// Prof
+// search query
+// search input css
