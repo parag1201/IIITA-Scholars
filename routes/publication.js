@@ -85,11 +85,29 @@ router.get("/search", async (req, res) => {
 			} catch (e) {
 				res.status(500).json({ message: e.message })
 			}
+			
+			results.results.forEach((paper) => {
+				var list = [];
+				for (
+					let index = 0;
+					index < Math.min(4, paper.authors.length);
+					index++
+				) {
+					const author = paper.authors[index];
+					list.push(author);
+				}
+				paper.authors = list;
+			});
+
 
 			Publication.find((err, docs) => {
 				res.render("../views/search.hbs", {
 					papers: results.results,
 					faculties: facult,
+					currentPage: page,
+					pagesAfter: Math.ceil((2725 - (page-1)*20)/20),
+					prev: page-1,
+					next: page+1
 				});
 			}).lean();
 		}
