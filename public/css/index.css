@@ -27,50 +27,6 @@ html {
     }
 }
 
-/* Search */
-
-.search-div {
-    background-image: url('../images/homepage.jpg');
-    background-size: 100%;
-    background-attachment: fixed no-repeat;
-    padding: 0px 0px;
-}
-
-.dark-overlay {
-    padding: 5em 10em 5em 10em;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.search-label {
-    font-size: 1.5rem;
-    color: white;
-}
-
-.dept {
-    background-color: white;
-    margin: 0% 5px;
-}
-
-#inputState1 {
-    margin-bottom: 3px;
-    width: 250px;
-}
-
-.search-form {
-    display: flex;
-    flex-direction: row;
-    padding-top: 2%;
-}
-
-.search-form button {
-    width: 300px;
-    height: 38px;
-    margin: 1px 10px;
-}
-
 /* Counter */
 
 #counter {
@@ -95,6 +51,51 @@ html {
 
 .count-box span {
     font-size: 2rem;
+}
+
+
+/* search bar*/
+.search-bar{
+    width: 100%;
+    max-height: 400px;
+    background-image: url('../images/homepage.jpg');
+}
+
+.dark-overlay {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100%;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    max-height: 400px;
+}
+
+input, select {
+    padding: 1em;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+label{
+    color: white;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.search-link {
+    padding: 0.9em;
+    margin-top: 2.2em;
+    width: 100%;
+    max-width: 400px;
 }
 
 /* Professors */

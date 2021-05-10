@@ -1,79 +1,48 @@
 <searchbar>
     <section class="search-bar">
         <div class="dark-overlay">
-            <form action="/publications/search" method="GET">
-                <div class="grp">
-                    <label >Search here</label>
-                    <input placeholder="Enter keywords" name="query" />
+            <form class="container" action="/publications/search" method="GET">
+                <div class="form-row">
+                    <div class="col-md-8 form-group">
+                        <label >Search here...</label>
+                        <input placeholder="Enter keywords" name="query" />
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label>Faculty</label>
+                        <select class="search-type" name="faculty" id="search-options">
+                            <option selected disabled>All</option>
+                            {{#each faculties as |f|}}
+                            <option value="{{f.name}}">{{f.name}}</option>
+                            {{/each}}
+                        </select>
+                    </div> 
                 </div>
-                <div class="grp">
-                    <label>Faculty</label>
-                    <select class="search-type" name="faculty" id="search-options">
-                        <option selected disabled>All</option>
-                        {{#each faculties as |f|}}
-                        <option value="{{f.name}}">{{f.name}}</option>
-                        {{/each}}
-                    </select>
+                <div class="form-row">
+                    <div class="col-md-3 form-group">
+                        <label>Year</label>
+                        <select class="search-type" name="year" id="search-options">
+                            <option selected disabled>All</option>
+                            {{#yearLoop 1973 2022 1}}
+                                {{this}}
+                            {{/yearLoop}}
+                        </select>
+                    </div>
+                    
+                    <div class="col-md-6 form-group">
+                        <label>Department</label>
+                        <select class="search-type" name="department" id="search-options">
+                            <option selected disabled>All</option>
+                            <option value="Department of Information Technology ">Information Technology</option>
+                            <option value="Department of Electronics and Communication Engineering ">Electronics and Communication Engineering</option>
+                            <option value="Department of Management Studies ">Management Studies</option>
+                            <option value="Department of Applied Sciences ">Applied Sciences</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <a href="http://localhost:4000/publications"><button class="btn btn-primary search-link" type="submit">Search</button></a>
+                    </div>
                 </div>
-                <div class="grp">
-                    <label>Year</label>
-                    <select class="search-type" name="year" id="search-options">
-                        <option selected disabled>All</option>
-                        {{#yearLoop 1973 2022 1}}
-                            {{this}}
-                        {{/yearLoop}}
-                    </select>
-                </div>
-                <div class="grp">
-                    <label>Department</label>
-                    <select class="search-type" name="department" id="search-options">
-                        <option selected disabled>All</option>
-                        <option value="Department of Information Technology ">Information Technology</option>
-                        <option value="Department of Electronics and Communication Engineering ">Electronics and Communication Engineering</option>
-                        <option value="Department of Management Studies ">Management Studies</option>
-                        <option value="Department of Applied Sciences ">Applied Sciences</option>
-                    </select>
-                </div>
-                {{!-- <input type="submit" value="Submit"> --}}
-                <a href="http://localhost:4000/publications"><button class="btn btn-primary search-link" type="submit">Search</button></a>
             </form>
         </div>
     </section>
-    <div class="container search-result-display article-list">
-        {{#each papers as |paper|}}
-        <div class="paper-card">
-            <div class="title">
-                <a href={{paper.publicationLink}} target="_blank">{{paper.title}}</a>
-            </div>
-            <div class="other-info">
-                <div class="authors">
-                    <p>Authors: </p>
-                    {{#each paper.authors as |author|}}
-                        <p>{{author}}</p>
-                    {{/each}}
-                </div>
-                <div class="year">
-                    <p>{{paper.year}}</p>
-                </div>
-            </div>
-            <div class="tags">
-                {{#each paper.keywords as |tag|}}
-                    <a class="tag" href="/publications/search?query={{tag}}">{{tag}}</a>
-                {{/each}}
-            </div>
-        </div>
-        {{/each}}
-    </div>
-
-    <span id="pagination-wrapper" class="pagination-buttons">
-        {{#ifCond currentPage '!==' 1 }}
-            <a class="pag-link left-button" href="/publications/search?page={{prev}}&limit=20"><i class="fas fa-chevron-left"></i></a>
-        {{/ifCond}}
-        {{#forPag currentPage pagesAfter }}
-            {{this}}
-        {{/forPag}}
-        {{#ifCond currentPage '!==' 137 }}
-        <a class="pag-link right-button" href="/publications/search?page={{next}}&limit=20"><i class="fas fa-chevron-right"></i></a>
-        {{/ifCond}}
-    </span>
 </searchbar>
