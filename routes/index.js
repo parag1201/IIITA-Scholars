@@ -3,12 +3,14 @@ const router = express.Router()
 const Profile = require('../models/profile')
 const Publication = require('../models/publication')
 
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
     var yearwiseArticles = []
     var yearwiseCitations = []
     var deptWise = []
     var depts = []
     var types = []
+    
+    const facult = await Profile.find().lean();
 
     Publication.find()
         .lean()
@@ -76,6 +78,7 @@ router.get('/', (req, res) => {
                         countPublications: result.length,
                         countDepartments: depts.length,
                         countOfCitation: pp,
+                        faculties: facult,
                     })
                 })
         })
