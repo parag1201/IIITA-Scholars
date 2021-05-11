@@ -21,6 +21,7 @@
     "@srexi/purecounterjs": "^1.1.1",
     "chart.js": "^2.9.4",
     "config": "^3.3.6",
+    "dotenv": "^9.0.2",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.1",
     "handlebars": "^4.7.7",

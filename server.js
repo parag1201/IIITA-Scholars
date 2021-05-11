@@ -4,12 +4,11 @@ const exphbs = require("express-handlebars");
 //const connectDB = require('./config/db');
 const mongoose = require("mongoose");
 const profData = require("./config/data.json");
+const dotenv = require('dotenv').config();
 const port = process.env.PORT || 4000;
 var app = express();
 var hbs = exphbs.create({});
-
-const dbURI =
-	"mongodb+srv://parag:ry0TSDl0qIdbBaKl@cluster0.zzsw3.mongodb.net/scholars?retryWrites=true&w=majority";
+const dbURI = process.env.MONGOURI;
 
 mongoose
 	.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
